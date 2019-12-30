@@ -1,5 +1,6 @@
 import {
-
+    RECEIVE_RECIPES,
+    RECEIVE_SINGLE_RECIPE
 } from '../actions/recipe_actions';
 
 const APIRecipesReducer = (state = {}, action) => {
