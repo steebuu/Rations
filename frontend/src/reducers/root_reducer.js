@@ -3,10 +3,12 @@
 import { combineReducers } from 'redux';
 import session from './session_reducer';
 import errors from './errors_reducer';
+import RecipesReducer from './recipes/recipes_reducer';
 
 const RootReducer = combineReducers({
     session,
-    errors
+    errors,
+    recipes: RecipesReducer
 });
 
 export default RootReducer;
