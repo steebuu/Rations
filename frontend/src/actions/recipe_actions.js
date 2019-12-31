@@ -29,6 +29,12 @@ export const fetchSingleRecipe = (recipeId) => dispatch => {
     });
 };
 
+export const fetchRandomRecipes = (num) => dispatch => {
+    return RecipeAPIUtil.fetchRandomRecipes(num).then(recipes => {
+        return dispatch(receiveRecipes(recipes));
+    })
+}
+
 // export const signup = user => dispatch => (
 //     APIUtil.signup(user).then(() => (
 //         dispatch(receiveUserSignIn())
