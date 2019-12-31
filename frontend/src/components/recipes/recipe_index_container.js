@@ -4,13 +4,14 @@ import RecipeIndex from './recipe_index';
 
 const msp = (state) => {
     return {
-        recipes: Object.values(state.entities.recipes)
+        // recipes: Object.values(state.entities.recipes)
+        recipes: state.entities.recipes
     }
 };
 
 const mdp = (dispatch) => {
     return {
-        fetchRandomRecipes: () => dispatch(fetchRandomRecipes())
+        fetchRandomRecipes: (num) => dispatch(fetchRandomRecipes(num))
     }
 };
 

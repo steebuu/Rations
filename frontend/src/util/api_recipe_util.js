@@ -7,17 +7,17 @@ export const fetchApiRecipes = (filters) => {
   const baseUrl = "https://api.spoonacular.com/recipes/find" + `ByIngredients?number=${filters.number}&ranking=2&ingredients=`
   const advancedUrl= baseUrl + ingredientsString;
   const perfectUrl = advancedUrl + `&apiKey=${keys.recipeKey}`
-  return axios.get(perfectUrl).then(recipes => console.log(recipes));
+  return axios.get(perfectUrl)
 }
 
 export const fetchApiRandomRecipes = (number) => {
   const baseUrl = "https://api.spoonacular.com/recipes/random" + `?number=${number}`
   const perfectUrl = baseUrl + `&apiKey=${keys.recipeKey}`
-  return axios.get(perfectUrl).then(recipes => console.log(recipes));
+  return axios.get(perfectUrl)
 }
 
 export const fetchApiRecipe = (id) => {
   const baseUrl = "https://api.spoonacular.com/recipes/" + `${id}/information?`
   const perfectUrl = baseUrl + `&apiKey=${keys.recipeKey}`
-  return axios.get(perfectUrl).then(recipe => console.log(recipe));
+  return axios.get(perfectUrl)
 }
