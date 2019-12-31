@@ -1,8 +1,9 @@
 import {
-
+    RECEIVE_RECIPES,
+    RECEIVE_SINGLE_RECIPE
 } from '../actions/recipe_actions';
 
-const UserRecipesReducer = (state = {}, action) => {
+const RecipesReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         default:
@@ -10,4 +11,4 @@ const UserRecipesReducer = (state = {}, action) => {
     }
 };
 
-export default UserRecipesReducer;
+export default RecipesReducer;

@@ -1,6 +1,7 @@
+import * as RecipeAPIUtil from '../util/recipe_api_util';
+
 export const RECEIVE_RECIPES = "RECEIVE_RECIPES";
 export const RECEIVE_SINGLE_RECIPE = "RECEIVE_SINGLE_RECIPE";
-import * as RecipeAPIUtil from '../util/recipe_api_util';
 
 export const receiveRecipes = recipes => {
     return {

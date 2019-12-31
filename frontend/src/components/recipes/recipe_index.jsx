@@ -9,7 +9,7 @@ export default class RecipeIndex extends Component {
     }
 
     componentDidMount(){
-        
+        fetchDbRecipes();
     }
 
     render() {
