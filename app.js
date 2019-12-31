@@ -15,7 +15,6 @@ mongoose
 
 
 app.get("/", (req, res) => {
-  console.log(res);
   res.send("Greetings World");
 });
 
