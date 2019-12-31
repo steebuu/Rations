@@ -4,7 +4,6 @@ export const RECEIVE_RECIPES = "RECEIVE_RECIPES";
 export const RECEIVE_SINGLE_RECIPE = "RECEIVE_SINGLE_RECIPE";
 
 export const receiveRecipes = recipes => {
-    debugger;
     return {
         type: RECEIVE_RECIPES,
         recipes
@@ -31,9 +30,7 @@ export const fetchSingleRecipe = (recipeId) => dispatch => {
 };
 
 export const fetchRandomRecipes = (number) => dispatch => {
-    debugger;
     return RecipeAPIUtil.fetchApiRandomRecipes(number).then(recipes => {
-        debugger;
         return dispatch(receiveRecipes(recipes));
     })
 }

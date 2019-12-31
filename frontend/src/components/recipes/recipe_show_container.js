@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import RecipeShow from './recipe_show';
+import { fetchSingleRecipe } from '../../actions/recipe_actions';
 
 const msp = (state, ownProps) => {
     return {
@@ -10,7 +11,7 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => {
     return {
-        fetchRecipe: (recipeId) => dispatch(fetchRecipes(recipeId))
+        fetchRecipe: (recipeId) => dispatch(fetchSingleRecipe(recipeId))
     }
 };
 
