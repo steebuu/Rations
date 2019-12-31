@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchRecipes } from '../../actions/recipe_actions';
 import Searchbar from './searchbar';
+import {withRouter} from 'react-router-dom';
 
 // const msp = state => {
     
@@ -12,4 +13,4 @@ const mdp = dispatch => {
     };
 }
 
-export default connect(null, mdp)(Searchbar);
+export default withRouter(connect(null, mdp)(Searchbar));

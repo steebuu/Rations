@@ -23,6 +23,7 @@ export default class Searchbar extends Component {
         }
         filter.ingredients.push(this.state.search);
         this.props.fetchRecipes(filter);
+        this.props.history.push(`/searchresults`);
     }
 
     render() {

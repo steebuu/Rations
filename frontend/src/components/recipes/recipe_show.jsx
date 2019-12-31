@@ -7,10 +7,9 @@ export default class RecipeShow extends Component {
     }
 
     componentDidMount(){
-        const {fetchRecipe, recipe, recipeId} = this.props;
-        if (!recipe) {
-            fetchRecipe(recipeId)
-        }
+        const {fetchRecipe, recipeId} = this.props;
+        
+        fetchRecipe(recipeId)
     }
 
     // fetchRecipe(recipeId){
@@ -21,8 +20,9 @@ export default class RecipeShow extends Component {
         const {recipe, recipeId} = this.props;
         if (!recipe) return null;
         let instructionLi;
-        if (recipe){
+        if (recipe && recipe.analyzedInstructions){
             instructionLi = recipe.analyzedInstructions[0].steps.map((instruction, i) => {
+                debugger;
                 return(
                     <li key={i}>{instruction.step}</li>
                 )
