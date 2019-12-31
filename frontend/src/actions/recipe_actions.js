@@ -1,4 +1,4 @@
-import * as RecipeAPIUtil from '../util/recipe_api_util';
+import * as RecipeAPIUtil from '../util/api_recipe_util';
 
 export const RECEIVE_RECIPES = "RECEIVE_RECIPES";
 export const RECEIVE_SINGLE_RECIPE = "RECEIVE_SINGLE_RECIPE";
@@ -17,20 +17,20 @@ export const receiveSingleRecipe = recipe => {
     }
 }
 
-export const fetchRecipes = () => dispatch => {
-    return RecipeAPIUtil.fetchRecipes().then(recipes => {
+export const fetchRecipes = (filters) => dispatch => {
+    return RecipeAPIUtil.fetchApiRecipes(filters).then(recipes => {
         return dispatch(receiveRecipes(recipes));
     });
 };
 
 export const fetchSingleRecipe = (recipeId) => dispatch => {
-    return RecipeAPIUtil.fetchSingleRecipe(recipeId).then(recipe => {
+    return RecipeAPIUtil.fetchApiRecipe(recipeId).then(recipe => {
         return dispatch(receiveSingleRecipe(recipe));
     });
 };
 
-export const fetchRandomRecipes = (num) => dispatch => {
-    return RecipeAPIUtil.fetchRandomRecipes(num).then(recipes => {
+export const fetchRandomRecipes = (number) => dispatch => {
+    return RecipeAPIUtil.fetchApiRandomRecipes(number).then(recipes => {
         return dispatch(receiveRecipes(recipes));
     })
 }
