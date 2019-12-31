@@ -9,13 +9,17 @@ export default class RecipeIndex extends Component {
     }
 
     componentDidMount(){
-        fetchRecipes();
+        this.props.fetchRandomRecipes();
     }
 
     render() {
+        const {recipes} = this.props;
+        const recipeLis = recipes.map(recipe => {
+            return <RecipeIndexItem recipe={recipe}/>
+        })
         return (
             <div>
-                
+                {recipeLis}
             </div>
         )
     }
