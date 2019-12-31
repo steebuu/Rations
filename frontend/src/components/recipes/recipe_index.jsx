@@ -15,7 +15,7 @@ export default class RecipeIndex extends Component {
     render() {
         const {recipes} = this.props;
         const recipeLis = recipes.map(recipe => {
-            return <RecipeIndexItem recipe={recipe}/>
+            return <RecipeIndexItem recipe={recipe} key={recipe.id}/>
         })
         return (
             <div>
