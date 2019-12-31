@@ -2,8 +2,10 @@ import * as RecipeAPIUtil from '../util/api_recipe_util';
 
 export const RECEIVE_RECIPES = "RECEIVE_RECIPES";
 export const RECEIVE_SINGLE_RECIPE = "RECEIVE_SINGLE_RECIPE";
+export const RECEIVE_RANDOM_RECIPES = "RECEIVE_RANDOM_RECIPES";
 
 export const receiveRecipes = recipes => {
+    debugger;
     return {
         type: RECEIVE_RECIPES,
         recipes
@@ -17,8 +19,17 @@ export const receiveSingleRecipe = recipe => {
     }
 }
 
+export const receiveRandomRecipes = recipes => {
+    return {
+        type: RECEIVE_RANDOM_RECIPES,
+        recipes
+    }
+}
+
 export const fetchRecipes = (filters) => dispatch => {
+    debugger;
     return RecipeAPIUtil.fetchApiRecipes(filters).then(recipes => {
+        debugger;
         return dispatch(receiveRecipes(recipes));
     });
 };
@@ -31,7 +42,7 @@ export const fetchSingleRecipe = (recipeId) => dispatch => {
 
 export const fetchRandomRecipes = (number) => dispatch => {
     return RecipeAPIUtil.fetchApiRandomRecipes(number).then(recipes => {
-        return dispatch(receiveRecipes(recipes));
+        return dispatch(receiveRandomRecipes(recipes));
     })
 }
 
