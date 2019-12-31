@@ -1,15 +1,17 @@
-import { fetchRecipes } from '../../actions/recipe_actions';
+import { fetchRandomRecipes } from '../../actions/recipe_actions';
 import { connect } from 'react-redux';
 import RecipeIndex from './recipe_index';
 
-// const msp = (state) => {
-
-// };
-
-const mdp = (dispatch) => {
+const msp = (state) => {
     return {
-        fetchRecipes: () => dispatch(fetchRecipes())
+        recipes: Object.values(state.entities.recipes)
     }
 };
 
-export default connect(null, mdp)(RecipeIndex);
+const mdp = (dispatch) => {
+    return {
+        fetchRandomRecipes: () => dispatch(fetchRandomRecipes())
+    }
+};
+
+export default connect(msp, mdp)(RecipeIndex);
