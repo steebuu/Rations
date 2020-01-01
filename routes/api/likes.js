@@ -31,6 +31,11 @@ router.get('/recipes/:recipe_id', (req, res) => {
       res.json({}));
 });
 
-
+router.get('/users/:user_id', (req, res) => {
+  Like.find({ user: req.params.user_id })
+    .then(likes => res.json(likes))
+    .catch(() =>
+      res.json({}));
+});
 
 module.exports = router;

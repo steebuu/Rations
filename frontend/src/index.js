@@ -6,7 +6,8 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 import { fetchApiRecipes, fetchApiRandomRecipes, fetchApiRecipe } from './util/api_recipe_util';
-import { createLike, removeLike, fetchLikes } from './util/like_util'
+import { createLike, removeLike, fetchLikesByRecipe, fetchLikesByUser } from './util/like_util';
+import { createComment, removeComment, fetchComments, updateComment } from './util/comment_util';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -36,7 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
     window.fetchApiRecipe = fetchApiRecipe;
     window.createLike = createLike;
     window.removeLike = removeLike;
-    window.fetchLikes = fetchLikes;
+    window.fetchLikesByRecipe = fetchLikesByRecipe;
+    window.fetchLikesByUser = fetchLikesByUser;
+    window.createComment = createComment;
+    window.removeComment = removeComment;
+    window.fetchComments = fetchComments;
+    window.updateComment = updateComment;
 
     ReactDOM.render(<Root store={store} />, root);
 });
