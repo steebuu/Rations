@@ -14,15 +14,6 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  console.log(req);
-  // let collection = mongoose.get().collection('likes');
-  // collection.deleteOne({ _id: new mongo.ObjectId(req.params.id) });
-  
-  // Like.deleteOne({ "_id": new mongo.ObjectId(req.params.id) }, function (err) {
-  //   if (err) console.log(err);
-  //   console.log("Successful deletion");
-  // });  
-
   Like.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       console.log("error in deleting yo!");
@@ -30,10 +21,15 @@ router.delete('/:id', (req, res) => {
     } else {
       console.log("data all gone and deleted yo");
     }
+  });
 });
 
+router.get('/recipes/:recipeId', (req, res) => {
+  Like.find({ recipe: req.params.recipeId})
+    .then(likes => res.json(likes))
+    .catch( () => 
+      res.json({}));
 });
- 
 
 
 
