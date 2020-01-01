@@ -4,7 +4,8 @@ import Like from './likes';
 const msp = (state, ownProps) => {
     return {
         user: state.session.user,
-        recipeId: ownProps.recipeId
+        recipeId: ownProps.recipeId,
+        likes: state.likes
     }
 }
 
