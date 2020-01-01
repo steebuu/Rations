@@ -24,13 +24,18 @@ router.delete('/:id', (req, res) => {
   });
 });
 
-router.get('/recipes/:recipeId', (req, res) => {
-  Like.find({ recipe: req.params.recipeId})
+router.get('/recipes/:recipe_id', (req, res) => {
+  Like.find({ recipe: req.params.recipe_id})
     .then(likes => res.json(likes))
     .catch( () => 
       res.json({}));
 });
 
-
+router.get('/users/:user_id', (req, res) => {
+  Like.find({ user: req.params.user_id })
+    .then(likes => res.json(likes))
+    .catch(() =>
+      res.json({}));
+});
 
 module.exports = router;

@@ -5,7 +5,7 @@ const LikeSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: 'users'
-    },
+  },
   recipe: {
     type: Number
   },

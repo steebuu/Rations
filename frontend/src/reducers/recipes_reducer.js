@@ -5,11 +5,19 @@ import {
 } from '../actions/recipe_actions';
 
 const RecipesReducer = (state = {}, action) => {
+<<<<<<< HEAD
+=======
+     ;
+>>>>>>> d7edec098638bb6089a669a56d18265d8a821bd1
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_RANDOM_RECIPES:
             return action.recipes.data.recipes
         case RECEIVE_RECIPES:
+<<<<<<< HEAD
+=======
+             ;
+>>>>>>> d7edec098638bb6089a669a56d18265d8a821bd1
             let newState = {};
             action.recipes.data.forEach(recipe => {
                 newState[recipe.id] = recipe
