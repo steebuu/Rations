@@ -26,8 +26,7 @@ const removeLike = like => {
 }
 
 export const fetchLikes = (recipeId) => dispatch => {
-    return LikeAPIUtil.fetchLikes(recipeId).then(likes => {
-        debugger;
+    return LikeAPIUtil.fetchLikesByRecipe(recipeId).then(likes => {
         return dispatch(receiveLikes(likes));
     })
 }

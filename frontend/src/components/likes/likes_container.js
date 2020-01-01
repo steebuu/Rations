@@ -12,9 +12,9 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
     return {
-        likeRecipe: () => dispatch(postLike()),
-        unlikeRecipe: () => dispatch(deleteLike()),
-        fetchLikes: () => dispatch(fetchLikes())
+        likeRecipe: (data) => dispatch(postLike(data)),
+        unlikeRecipe: (id) => dispatch(deleteLike(id)),
+        fetchLikes: recipeId => dispatch(fetchLikes(recipeId))
     }
 }
 

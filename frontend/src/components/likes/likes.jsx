@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 export default class Like extends Component {
     constructor(props){
         super(props);
+        this.handleLike = this.handleLike.bind(this);
     }
 
     componentDidMount(){
@@ -19,10 +20,9 @@ export default class Like extends Component {
 
         } else {
             const createLike = {
-                user: user.id,
+                userId: user.id,
                 recipeId: recipeId
             };
-            
             likeRecipe(createLike);
         }
         
