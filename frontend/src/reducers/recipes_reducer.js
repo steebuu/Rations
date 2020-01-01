@@ -5,13 +5,11 @@ import {
 } from '../actions/recipe_actions';
 
 const RecipesReducer = (state = {}, action) => {
-    debugger;
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_RANDOM_RECIPES:
             return action.recipes.data.recipes
         case RECEIVE_RECIPES:
-            debugger;
             let newState = {};
             action.recipes.data.forEach(recipe => {
                 newState[recipe.id] = recipe

@@ -15,19 +15,30 @@ export default class Like extends Component {
         const {user, recipeId, likeRecipe, unlikeRecipe, fetchLikes, likes} = this.props;
  
         if (likes[user.id]){
-            unlikeRecipe(likes[user.id].id);
+            unlikeRecipe(likes[user.id].id); 
+
         } else {
-            likeRecipe();
+            const createLike = {
+                user: user.id,
+                recipeId: recipeId
+            };
+            
+            likeRecipe(createLike);
         }
         
         fetchLikes(); 
     }
 
     render() {
+        const {user, likes} = this.props;
+        let heart = <i class="far fa-heart"></i>
+        if (user && likes[user.id]){
+            heart = <i class="fas fa-heart"></i>
+        }
+
         return (
             <div>
-             <button onClick={this.handleLike}><i class="far fa-thumbs-up"></i></button>
-             <div></div>
+             <button onClick={this.handleLike}>{heart}</button>
             </div>
         )
     }
