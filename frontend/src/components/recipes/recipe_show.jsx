@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import LikeContainer from '../likes/likes_container';
 
 export default class RecipeShow extends Component {
     constructor(props){
@@ -22,7 +23,10 @@ export default class RecipeShow extends Component {
         let instructionLi;
         if (recipe && recipe.analyzedInstructions){
             instructionLi = recipe.analyzedInstructions[0].steps.map((instruction, i) => {
+<<<<<<< HEAD
+=======
                  ;
+>>>>>>> d7edec098638bb6089a669a56d18265d8a821bd1
                 return(
                     <li key={i}>{instruction.step}</li>
                 )
@@ -32,6 +36,7 @@ export default class RecipeShow extends Component {
             <div>
                 <img src={recipe.image} alt="" />
                 <p>{recipe.title}</p>
+                <LikeContainer />
                 <p>{recipe.sourceName}</p>
                 <ul>{instructionLi}</ul>
             </div>

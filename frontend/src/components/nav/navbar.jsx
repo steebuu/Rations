@@ -36,6 +36,7 @@ class NavBar extends React.Component {
     render() {
         return (
             <div>
+                <i class="far fa-thumbs-up"></i>
                 <h1>NAVBAR GOES HERE</h1>
                 <SearchbarContainer />
                 {this.getLinks()}
