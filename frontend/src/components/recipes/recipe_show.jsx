@@ -22,7 +22,7 @@ export default class RecipeShow extends Component {
         let instructionLi;
         if (recipe && recipe.analyzedInstructions){
             instructionLi = recipe.analyzedInstructions[0].steps.map((instruction, i) => {
-                debugger;
+                 ;
                 return(
                     <li key={i}>{instruction.step}</li>
                 )
