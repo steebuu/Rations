@@ -3,7 +3,6 @@ import keys from '../config/keys';
 
 
 export const fetchApiRecipes = (filters) => {
-  console.log(keys)
   const ingredientsString = filters.ingredients.map(ingredient => ingredient + '%2C');
   const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?number=${filters.number}&ranking=2&ingredients=`
   const advancedUrl= baseUrl + ingredientsString;
