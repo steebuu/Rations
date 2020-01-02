@@ -10,9 +10,7 @@ const express = require("express");
 const app = express();
 const path = require('path');
 const db = require('./config/keys').mongoURI;
-const keys = require('./config/keys');
 // displayRoutes = require('express-routemap');
-console.log(keys);
 mongoose
   .connect(db, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB successfully"))
