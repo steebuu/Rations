@@ -1,21 +1,22 @@
 import {
     RECEIVE_COMMENTS,
-    CREATE_COMMENT,
     REMOVE_COMMENT,
-    UPDATE_COMMENT
 } from '../actions/comment_actions';
 
 const CommentsReducer = (state = {}, action) => {
+    let newState;
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_COMMENTS:
-            return state;
-        case CREATE_COMMENT:
-            return state;
+            newState = {};
+            action.comments.forEach(comment => {
+                newState[comment.user] = comment
+            })
+            return newState;
         case REMOVE_COMMENT:
-            return state;
-        case UPDATE_COMMENT:
-            return state;
+            newState = Object.assign({}, state);
+            delete newState[action.comment.user];
+            return newState;
         default:
             return state;
     }
