@@ -42,22 +42,32 @@ export default class CommentsIndexItem extends Component {
     }
 
     render() {
-        const {comment} = this.props;
+        const {comment, currentUser} = this.props;
         let component;
+
         if (this.state.edit) {
             component = <form onSubmit={this.handleSubmit}>
-                <input type="text" value={this.state.body} onChange={this.update("body")}/>
-                <button>Save Changes</button>
-                </form>
+                            <input type="text" value={this.state.body} onChange={this.update("body")}/>
+                            <button>Save Changes</button>
+                        </form>      
         } else {
             component = <p>{this.state.body}</p>
         }
+
+        let authButtons;
+
+        if (currentUser && currentUser.id === comment.user) {
+            authButtons = <div>
+                            <button onClick={this.handleEdit}>Edit</button>
+                            <button onClick={this.handleDelete}>Delete</button>
+                          </div>
+        }
+
         return (
             <div>
                 <span>{comment.user}</span>
                 {component}
-                <button onClick={this.handleEdit}>Edit</button>
-                <button onClick={this.handleDelete}>Delete</button>
+                {authButtons}
             </div>
         )
     }
