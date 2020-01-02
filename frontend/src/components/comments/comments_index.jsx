@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CommentIndexItemContainer from './comments_index_item_container';
 
 export default class CommentsIndex extends Component {
 
@@ -14,7 +15,7 @@ export default class CommentsIndex extends Component {
             debugger;
             commentLis = Object.values(comments).map((comment, i) => {
                 return(
-                    <li key={i}>{comment.body}</li>
+                    <CommentIndexItemContainer comment={comment}/>
                 )
             })
         }

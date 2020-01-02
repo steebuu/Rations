@@ -30,14 +30,9 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  Comment.findByIdAndRemove(req.params.id, (error, data) => {
-    if (error) {
-      console.log("error in deleting yo!");
-      throw error;
-    } else {
-      console.log("data all gone and deleted yo");
-    }
-  });
+  Comment.findByIdAndRemove(req.params.id)
+    .then(comment => res.json(comment))
+    .catch((error) => { throw error })
 });
 
 router.get('/recipes/:recipe_id', (req, res) => {
