@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Comments from './comments';
+import CommentsIndex from './comments_index';
 import { fetchComments, createComment, updateComment, removeComment } from '../../actions/comment_actions';
 
 const msp = (state, ownProps) => {
@@ -19,4 +19,4 @@ const mdp = dispatch => {
     }
 }
 
-export default connect(msp, mdp)(Like);
+export default connect(msp, mdp)(CommentsIndex);
