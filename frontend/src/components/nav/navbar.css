@@ -1,0 +1,117 @@
+.navbar {
+  background: #101010;
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.logo {
+    color: #FBE555;
+    font-family: 'Yellowtail', cursive;
+    font-size: 50px;
+    transform-origin: 0 0;
+    transform: skewY(-2deg);
+    padding: 5px;
+}
+
+.logo:hover{
+    text-shadow: 0px 0px 3px rgb(209, 183, 17);
+}
+
+.search-bar {
+    background: #3F3F40;
+    border: none;
+    padding: 0px 20px 0px 10px;
+    text-align: left;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* border-radius: 5px; */
+    height: 35px;
+    width: 100%;
+    font-size: 16px;
+    align-self: center;
+}
+
+.search-bar::placeholder {
+    font-size: 14px;
+    color: rgb(199, 195, 195);
+}  
+
+.search-bar-submit {
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    background: rgb(252, 223, 40);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    left: -12px;
+}
+
+.search-bar-submit:hover{
+    background: rgb(255, 238, 1);
+}
+
+.search-bar-form{
+    display: flex;
+    min-width: 400px;
+}
+
+.search-submit-container{
+    position:relative;
+    border-radius: 50%;
+    width: 60px;
+}
+
+.search-icon{
+  position: absolute;
+    top: 11px;
+    right: 28px;
+    font-size: 20px;
+    color: #202020;
+}
+
+.login-button {
+  color: rgb(199, 195, 195);
+  padding: 5px 10px;  
+}
+
+.signup-button {
+  /* background-color: #202020; */
+  color: rgb(199, 195, 195);
+  padding: 5px 15px;
+  margin: 0px 10px;
+  border: 2px solid rgb(199, 195, 195);
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.login-button:hover{
+    color: #39c7dd;
+}
+
+.logout-button{
+     color: rgb(199, 195, 195);
+     background: none;
+     border: none;
+     font-size: 16px;
+     margin-right: 20px;
+     cursor: pointer;
+}
+
+.logout-button:hover{
+    color: #39c7dd;
+}
+
+.signup-button:hover{
+    color: #39c7dd;
+    border: 2px solid #39c7dd;
+}
