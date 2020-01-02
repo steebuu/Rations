@@ -4,9 +4,9 @@ import React, { Component } from 'react'
 import RecipeIndexItem from './recipe_index_item';
 
 export default class RecipeIndex extends Component {
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
 
     componentDidMount(){
         this.props.fetchRandomRecipes(1);
