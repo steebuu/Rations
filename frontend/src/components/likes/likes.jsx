@@ -36,7 +36,8 @@ export default class Like extends Component {
 
         return (
             <div>
-             <button onClick={this.handleLike}>{heart}</button>
+                <span>{Object.keys(likes).length + "like(s)"}</span>
+                <button onClick={this.handleLike}>{heart}</button>
             </div>
         )
     }
