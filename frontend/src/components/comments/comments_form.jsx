@@ -7,6 +7,13 @@ export default class CommentsForm extends Component {
             body: "",
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.update = this.update.bind(this)
+    }
+
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
     }
 
     handleSubmit(e){
@@ -21,7 +28,7 @@ export default class CommentsForm extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Add a comment..." id=""/>
+                <input type="text" placeholder="Add a comment..." onChange={this.update("body")}/>
                 <button>Submit Comment</button>
             </form>
         )

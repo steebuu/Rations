@@ -1,5 +1,6 @@
 import {
     RECEIVE_COMMENTS,
+    RECEIVE_COMMENT,
     REMOVE_COMMENT,
 } from '../actions/comment_actions';
 
@@ -9,14 +10,16 @@ const CommentsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_COMMENTS:
             newState = {};
-            action.comments.forEach(comment => {
+            action.comments.data.forEach(comment => {
                 newState[comment.user] = comment
             })
             return newState;
         case REMOVE_COMMENT:
             newState = Object.assign({}, state);
-            delete newState[action.comment.user];
+            delete newState[action.comment.data.user];
             return newState;
+        case RECEIVE_COMMENT:
+            return Object.assign({}, state, {[action.comment.data.id]: action.comment.data})
         default:
             return state;
     }

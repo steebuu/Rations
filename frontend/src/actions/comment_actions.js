@@ -12,6 +12,7 @@ const receiveComments = comments => {
 }
 
 const receiveComment = comment => {
+  debugger;
   return {
     type: RECEIVE_COMMENT,
     comment

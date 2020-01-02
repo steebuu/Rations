@@ -11,7 +11,7 @@ export default class RecipeIndexItem extends Component {
     render() {
         const {recipe} = this.props;
         return (
-            <Link to={`recipes/${recipe.id}`}>
+            <Link to={`/recipes/${recipe.id}`}>
                 <img src={recipe.image} alt=""/>
                 <p>{recipe.title}</p>
                 <p>{recipe.sourceName}</p>
