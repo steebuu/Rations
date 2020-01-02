@@ -35,7 +35,7 @@ export default class RecipeShow extends Component {
                 <LikeContainer recipeId={recipeId}/>
                 <p>{recipe.sourceName}</p>
                 <ul>{instructionLi}</ul>
-                <CommentsIndexContainer/>
+                <CommentsIndexContainer recipeId={recipeId}/>
             </div>
         )
     }
