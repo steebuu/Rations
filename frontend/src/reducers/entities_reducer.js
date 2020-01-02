@@ -5,5 +5,6 @@ import LikesReducer from './likes_reducer';
 
 export default combineReducers({
     recipes: RecipesReducer,
-    likes: LikesReducer
+    likes: LikesReducer,
+    comments: CommentsReducer
 });
