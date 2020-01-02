@@ -12,7 +12,6 @@ export default class CommentsIndex extends Component {
         const {comments} = this.props;
         let commentLis;
         if (Object.keys(comments).length > 0){
-            debugger;
             commentLis = Object.values(comments).map((comment, i) => {
                 return(
                     <CommentIndexItemContainer comment={comment}/>

@@ -14,7 +14,6 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  console.log(req);
   Like.findByIdAndRemove(req.params.id)
     .then(like => res.json(like))
     .catch((error) => {throw error})

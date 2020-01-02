@@ -10,18 +10,15 @@ const CommentsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_COMMENTS:
             newState = {};
-            debugger;
             action.comments.data.forEach(comment => {
                 newState[comment._id] = comment
             })
             return newState;
         case REMOVE_COMMENT:
             newState = Object.assign({}, state);
-            debugger;
             delete newState[action.comment.data._id];
             return newState;
         case RECEIVE_COMMENT:
-            debugger;
             return Object.assign({}, state, {[action.comment.data._id]: action.comment.data})
         default:
             return state;

@@ -13,10 +13,7 @@ router.post('/', (req, res) => {
     return res.status(400).json(errors);
   }
 
-  console.log(req.params);
-  
   const { body, user, recipe } = req.body;
-  console.log(req.body);
   
   const newComment = new Comment({
     user: user,
@@ -25,7 +22,6 @@ router.post('/', (req, res) => {
   });
 
   newComment.save().then(comment => {
-    console.log(comment);
     res.json(comment)});
 });
 
@@ -45,7 +41,6 @@ router.get('/recipes/:recipe_id', (req, res) => {
 router.patch('/:id', (req, res) => {
   Comment.findById(req.params.id, (error, comment) => {
     if (error) {
-      console.log("error in updating yo!");
       throw error;
     } else {
       comment.body = req.body.body;
