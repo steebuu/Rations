@@ -12,8 +12,6 @@ router.post('/', (req, res) => {
   if (!isValid) {
     return res.status(400).json(errors);
   }
-
-  console.log(req.params);
   
   const { body, user, recipe } = req.body;
 
