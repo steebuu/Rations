@@ -1,5 +1,5 @@
 import axios from 'axios';
-import keys from '../config/keys';
+import keys from '../config/keys_prod';
 
 
 export const fetchApiRecipes = (filters) => {
