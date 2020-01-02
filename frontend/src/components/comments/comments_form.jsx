@@ -20,7 +20,7 @@ export default class CommentsForm extends Component {
         e.preventDefault();
         const {user, recipeId, createComment} = this.props;
         const {body} = this.state;
-        const data = {user: user.id, recipe: recipeId, body: body}
+        const data = {userId: user.id, recipeId: recipeId, body: body}
 
         createComment(data);
     }

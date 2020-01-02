@@ -16,14 +16,17 @@ router.post('/', (req, res) => {
   console.log(req.params);
   
   const { body, user, recipe } = req.body;
-
+  console.log(req.body);
+  
   const newComment = new Comment({
     user: user,
     recipe: recipe,
     body: body
   });
 
-  newComment.save().then(comment => res.json(comment));
+  newComment.save().then(comment => {
+    console.log(comment);
+    res.json(comment)});
 });
 
 router.delete('/:id', (req, res) => {
