@@ -13,12 +13,13 @@ router.post('/', (req, res) => {
     return res.status(400).json(errors);
   }
 
-  const { body, user, recipe } = req.body;
+  const { body, user, recipe, username } = req.body;
   
   const newComment = new Comment({
     user: user,
     recipe: recipe,
-    body: body
+    body: body,
+    username: username
   });
 
   newComment.save().then(comment => {

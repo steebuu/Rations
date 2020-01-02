@@ -18,7 +18,7 @@ const CommentSchema = new Schema({
     default: Date.now
   },
   username: {
-    type: String,
+    type: String
   }
 });
 

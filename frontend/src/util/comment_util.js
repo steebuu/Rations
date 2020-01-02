@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const createComment = ({ userId, recipeId, body }) => {
-  return axios.post('/api/comments/', { body: body, user: userId, recipe: recipeId })
+export const createComment = ({ userId, recipeId, body, username }) => {
+  return axios.post('/api/comments/', { body: body, user: userId, recipe: recipeId, username: username })
 }
 
 export const removeComment = id => {
