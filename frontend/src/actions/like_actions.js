@@ -38,7 +38,8 @@ export const postLike = data => dispatch => {
 }
 
 export const deleteLike = likeId => dispatch => {
-    return LikeAPIUtil.removeLike(likeId).then(like => {
+    return LikeAPIUtil.removeLike(likeId)
+    .then(like => {
         return dispatch(removeLike(like));
     })
 }

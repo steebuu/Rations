@@ -7,8 +7,8 @@ export default class Like extends Component {
     }
 
     componentDidMount(){
-        const {fetchLikes} = this.props;
-        fetchLikes();
+        const {fetchLikes, recipeId} = this.props;
+        fetchLikes(recipeId);
     }
 
     handleLike(e){
@@ -16,17 +16,15 @@ export default class Like extends Component {
         const {user, recipeId, likeRecipe, unlikeRecipe, fetchLikes, likes} = this.props;
  
         if (likes[user.id]){
-            unlikeRecipe(likes[user.id].id); 
-
+            unlikeRecipe(likes[user.id]._id)
         } else {
             const createLike = {
                 userId: user.id,
                 recipeId: recipeId
             };
-            likeRecipe(createLike);
+            likeRecipe(createLike)
         }
-        
-        fetchLikes(); 
+        fetchLikes(recipeId) 
     }
 
     render() {
