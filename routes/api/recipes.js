@@ -11,6 +11,8 @@ router.post('/', (req, res) => {
   const ingredientsString = filters.ingredients.map(ingredient => ingredient + '%2C');
   const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?number=${filters.number}&ranking=2&ingredients=`
   const advancedUrl = baseUrl + ingredientsString;
+  console.log(keys);
+  console.log(keys.recipeKey);
   const perfectUrl = advancedUrl + `&apiKey=${keys.recipeKey}`;
   axios.get(perfectUrl).then(recipes => {
     return res.json(recipes.data);
