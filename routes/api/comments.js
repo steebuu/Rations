@@ -12,27 +12,27 @@ router.post('/', (req, res) => {
   if (!isValid) {
     return res.status(400).json(errors);
   }
-  
-  const { body, user, recipe } = req.body;
+<<<<<<< HEAD
+=======
 
+  const { body, user, recipe, username } = req.body;
+>>>>>>> Comments
+  
   const newComment = new Comment({
     user: user,
     recipe: recipe,
-    body: body
+    body: body,
+    username: username
   });
 
-  newComment.save().then(comment => res.json(comment));
+  newComment.save().then(comment => {
+    res.json(comment)});
 });
 
 router.delete('/:id', (req, res) => {
-  Comment.findByIdAndRemove(req.params.id, (error, data) => {
-    if (error) {
-      console.log("error in deleting yo!");
-      throw error;
-    } else {
-      console.log("data all gone and deleted yo");
-    }
-  });
+  Comment.findByIdAndRemove(req.params.id)
+    .then(comment => res.json(comment))
+    .catch((error) => { throw error })
 });
 
 router.get('/recipes/:recipe_id', (req, res) => {
@@ -45,7 +45,6 @@ router.get('/recipes/:recipe_id', (req, res) => {
 router.patch('/:id', (req, res) => {
   Comment.findById(req.params.id, (error, comment) => {
     if (error) {
-      console.log("error in updating yo!");
       throw error;
     } else {
       comment.body = req.body.body;

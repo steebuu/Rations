@@ -29,9 +29,9 @@ export default class Like extends Component {
 
     render() {
         const {user, likes} = this.props;
-        let heart = <i class="far fa-heart"></i>
+        let heart = <i className="far fa-heart"></i>
         if (user && likes[user.id]){
-            heart = <i class="fas fa-heart"></i>
+            heart = <i className="fas fa-heart"></i>
         }
 
         return (

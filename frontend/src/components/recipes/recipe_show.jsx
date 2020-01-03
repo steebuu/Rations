@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LikeContainer from '../likes/likes_container';
-
+import CommentsIndexContainer from '../comments/comments_index_container';
+import CommentsFormContainer from '../comments/comments_form_container';
 export default class RecipeShow extends Component {
     // constructor(props){
     //     super(props)
@@ -34,6 +35,8 @@ export default class RecipeShow extends Component {
                 <LikeContainer recipeId={recipeId}/>
                 <p>{recipe.sourceName}</p>
                 <ul>{instructionLi}</ul>
+                <CommentsIndexContainer recipeId={recipeId}/>
+                <CommentsFormContainer recipeId={recipeId}/>
             </div>
         )
     }
