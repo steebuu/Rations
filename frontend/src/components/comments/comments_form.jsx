@@ -21,14 +21,14 @@ export default class CommentsForm extends Component {
         const {user, recipeId, createComment} = this.props;
         const {body} = this.state;
         const data = {userId: user.id, recipeId: recipeId, body: body, username: user.username}
-
+        this.setState({body: ""})
         createComment(data);
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Add a comment..." onChange={this.update("body")}/>
+                <input type="text" placeholder="Add a comment..." onChange={this.update("body")} value={this.state.body}/>
                 <button>Submit Comment</button>
             </form>
         )
