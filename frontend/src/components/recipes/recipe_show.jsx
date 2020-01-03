@@ -23,15 +23,18 @@ export default class RecipeShow extends Component {
         let instructionLi;
         let ingredientsLi;
         let commentForm;
-
+        debugger;
         if (recipe && recipe.analyzedInstructions && recipe.analyzedInstructions.length > 0){
             instructionLi = recipe.analyzedInstructions[0].steps.map((instruction, i) => {
                 return(
                     <li key={i}>{instruction.step}</li>
                 )
             })
+        }
+
+        if (recipe && recipe.extendedIngredients) {
             ingredientsLi = recipe.extendedIngredients.map((ingredient, i) => {
-                return(
+                return (
                     <li key={i}>{ingredient.original}</li>
                 )
             })

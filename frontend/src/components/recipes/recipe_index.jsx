@@ -9,7 +9,7 @@ export default class RecipeIndex extends Component {
     // }
 
     componentDidMount(){
-        this.props.fetchRandomRecipes(1);
+        this.props.fetchRandomRecipes(20);
     }
 
     render() {
