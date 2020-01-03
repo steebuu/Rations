@@ -10,7 +10,6 @@ const CommentsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_COMMENTS:
             newState = {};
-            debugger;
             action.comments.data.forEach(comment => {
                 newState[comment._id] = comment
             })
