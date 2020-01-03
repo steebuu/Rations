@@ -20,23 +20,34 @@ export default class RecipeShow extends Component {
     // }
 
     render() {
-        const {recipe, recipeId} = this.props;
+        const {recipe, recipeId, user} = this.props;
         if (!recipe) return null;
         let instructionLi;
         let ingredientsLi;
-
+        let commentForm;
+        
         if (recipe && recipe.analyzedInstructions && recipe.analyzedInstructions.length > 0){
             instructionLi = recipe.analyzedInstructions[0].steps.map((instruction, i) => {
                 return(
                     <li key={i}>{instruction.step}</li>
                 )
             })
+        } else if (recipe && recipe.analyzedInstructions) {
+            instructionLi = <span> No instructions provided - use your imagination :)</span>
+        }
+
+        if (recipe && recipe.extendedIngredients) {
             ingredientsLi = recipe.extendedIngredients.map((ingredient, i) => {
-                return(
+                return (
                     <li key={i}>{ingredient.original}</li>
                 )
             })
         }
+
+        if (user && Object.keys(user).length > 0) {
+            commentForm = <CommentsFormContainer recipeId={recipeId} />
+        }
+        
         return (
             <div>
                 <div className="recipe-show-container">
@@ -54,9 +65,11 @@ export default class RecipeShow extends Component {
                 <div className="comments-container">
                     <h3 className="comments-header">Comments</h3>
                     <CommentsIndexContainer recipeId={recipeId}/>
-                    <CommentsFormContainer recipeId={recipeId}/>
+                    {commentForm}
                 </div>
             </div>
         )
     }
 }
+
+

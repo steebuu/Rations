@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react';
 import CommentIndexItemContainer from './comments_index_item_container';
 
-export default class CommentsIndex extends Component {
+export default class CommentsIndex extends React.Component {
 
     componentDidMount(){
         const {recipeId, fetchComments} = this.props;
@@ -14,7 +14,7 @@ export default class CommentsIndex extends Component {
         if (Object.keys(comments).length > 0){
             commentLis = Object.values(comments).map((comment, i) => {
                 return(
-                    <CommentIndexItemContainer comment={comment}/>
+                    <CommentIndexItemContainer comment={comment} key={i} />
                 )
             })
         }

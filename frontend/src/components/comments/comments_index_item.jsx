@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { fetchComments } from '../../actions/comment_actions';
-
-export default class CommentsIndexItem extends Component {
+import React from 'react';
+import './comments.css';
+export default class CommentsIndexItem extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -16,11 +15,10 @@ export default class CommentsIndexItem extends Component {
 
     handleSubmit(e){
         e.preventDefault();
-        const {updateComment, comment, fetchComments, recipeId} = this.props;
+        const {updateComment, comment} = this.props;
 
         updateComment({id: comment._id, body: this.state.body})
         this.setState({edit: false})
-        // fetchComments(recipeId);
     }
 
     update(field) {
@@ -66,9 +64,7 @@ export default class CommentsIndexItem extends Component {
         return (
             <div className="message-container">
                 <span className="message-username">{comment.username}:</span>
-                <div class="message-split">
-                    {component}
-                    {authButtons}
+                <div className="message-split">
                 </div>
             </div>
         )

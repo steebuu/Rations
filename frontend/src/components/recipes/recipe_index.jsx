@@ -9,18 +9,18 @@ export default class RecipeIndex extends Component {
     // }
 
     componentDidMount(){
-         ;
-        this.props.fetchRandomRecipes(1);
+        this.props.fetchRandomRecipes(21);
     }
 
     render() {
-        const {recipes} = this.props;
-        if (!recipes){
+        const { recipes } = this.props;
+        if (!recipes) {
             return null;
         }
         const recipeLis = Object.values(recipes).map(recipe => {
-            return <RecipeIndexItem recipe={recipe} key={recipe.id}/>
+            return <RecipeIndexItem recipe={recipe} key={recipe.id} />
         })
+        
         return (
             <div className="recipe-index">
                 <div className="recipe-index-container">
