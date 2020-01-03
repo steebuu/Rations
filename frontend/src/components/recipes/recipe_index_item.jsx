@@ -13,11 +13,13 @@ export default class RecipeIndexItem extends Component {
         const {recipe} = this.props;
         return (
             <div className="recipe-index-item-container">
-                <Link to={`recipes/${recipe.id}`} className="recipe-index-item">
-                    <img src={recipe.image} alt=""/>
-                    <p>{recipe.title}</p>
-                    <p>{recipe.sourceName}</p>
-                </Link>
+                <div class="recipe-index-item-inner-container">
+                    <Link to={`recipes/${recipe.id}`} className="recipe-index-item">
+                        <img src={recipe.image} alt=""/>
+                        <p>{recipe.title}</p>
+                        <p>{recipe.sourceName}</p>
+                    </Link>
+                </div>
             </div>
         )
     }

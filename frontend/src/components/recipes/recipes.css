@@ -1,18 +1,24 @@
 .filtered-recipe-index,
 .recipe-index {
-  display: flex;
+  margin: 0 auto;
   padding: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
+}
 
+.recipe-index-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
 }
 
 .recipe-index-item-container{
     background: #202020;
     border-radius: 15px;
     padding: 20px 20px 10px 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+}
+
+.recipe-index-item-inner-container {
+    width: 100%;
 }
 
 .recipe-index-item-container a {
@@ -23,6 +29,7 @@
 
 .recipe-index-item img{
     border-radius: 10px;
+    width: 100%;
 }
 
 .recipe-index-item p {
