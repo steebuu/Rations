@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
   Comment.findByIdAndRemove(req.params.id)
     .then(comment => res.json(comment))
-    .catch((error) => { throw error })
+    .catch((error) => { throw error; });
 });
 
 router.get('/recipes/:recipe_id', (req, res) => {
@@ -48,8 +48,6 @@ router.patch('/:id', (req, res) => {
       comment.save();
     }
   });
-
-  // Comment.findOneAndUpdate({ _id: req.body.id})
 });
 
 module.exports = router;

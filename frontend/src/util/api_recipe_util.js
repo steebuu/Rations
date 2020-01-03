@@ -1,5 +1,4 @@
 import axios from 'axios';
-// import keys from '../config/keys';
 
 
 export const fetchApiRecipes = (filters) => {
@@ -7,7 +6,7 @@ export const fetchApiRecipes = (filters) => {
 }
 
 export const fetchApiRandomRecipes = (number) => {
-  debugger
+   
   return axios.post('/api/recipes/random', { number: number });
 }
 

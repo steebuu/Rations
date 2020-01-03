@@ -8,7 +8,7 @@ const RecipesReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_RANDOM_RECIPES:
-            debugger
+             
             return action.recipes.data.recipes
         case RECEIVE_RECIPES:
             let newState = {};

@@ -36,3 +36,72 @@
     font-size: 18px;
     padding-top: 15px;
 }
+
+.recipe-show-container {
+    background-color: #202020;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.recipe-show-container img {
+    border-radius: 20px;
+    width: 550px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.recipe-show-container h2 {
+    padding: 50px 20px 0 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(199, 195, 195);
+}
+
+.recipe-show-sourceName {
+    text-align: center;
+    padding-top: 15px;
+    color: #B0AEAE;
+}
+
+.recipe-show-content{
+    width: 550px;
+    margin: 0 auto;
+}
+
+.ingredients-header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 10px 0px;
+    color: rgb(199, 195, 195);
+}
+
+.directions-header{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 30px 0 10px 0;
+    color: rgb(199, 195, 195);
+}
+
+.recipe-show-content ul, ol{
+    padding-left: 30px;
+}
+
+.ingredients-list li,
+.directions-list li{
+    padding: 5px 0;
+    line-height: 1.5;
+    color: #B0AEAE;
+}
+
+.comments-container {
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

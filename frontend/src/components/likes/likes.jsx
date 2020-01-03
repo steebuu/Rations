@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './likes.css';
 
 export default class Like extends Component {
     constructor(props){
@@ -29,15 +30,17 @@ export default class Like extends Component {
 
     render() {
         const {user, likes} = this.props;
-        let heart = <i className="far fa-heart"></i>
+        let heart = <i className="far fa-heart outline-heart"></i>
         if (user && likes[user.id]){
-            heart = <i className="fas fa-heart"></i>
+            heart = <i className="fas fa-heart filled-in-heart"></i>
         }
 
         return (
-            <div>
-                <span>{Object.keys(likes).length + "like(s)"}</span>
-                <button onClick={this.handleLike}>{heart}</button>
+            <div className="likes-info-container">
+                <div className="likes-column">
+                    <span className="likes-counter">{Object.keys(likes).length + " like(s)"}</span>
+                    <button className="likes-button" onClick={this.handleLike}>{heart}</button>
+                </div>
             </div>
         )
     }

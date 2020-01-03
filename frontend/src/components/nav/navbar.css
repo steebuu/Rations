@@ -21,7 +21,8 @@
 }
 
 .logo:hover{
-    text-shadow: 0px 0px 3px rgb(209, 183, 17);
+    text-shadow: 0px 0px 25px rgb(209, 183, 17);
+    transition:  .2s;
 }
 
 .search-bar {
@@ -29,7 +30,7 @@
     border: none;
     padding: 0px 20px 0px 10px;
     text-align: left;
-    color: white;
+    color: #e6e6e6;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     height: 35px;
@@ -58,6 +59,8 @@
 
 .search-bar-submit:hover{
     background: rgb(255, 238, 1);
+    box-shadow: 0px 0px 10px rgb(209, 185, 17);
+    transition: .2s;
 }
 
 .search-bar-form{

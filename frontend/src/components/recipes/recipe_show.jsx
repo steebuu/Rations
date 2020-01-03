@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import LikeContainer from '../likes/likes_container';
 import CommentsIndexContainer from '../comments/comments_index_container';
 import CommentsFormContainer from '../comments/comments_form_container';
+import './recipes.css';
+
 export default class RecipeShow extends Component {
     // constructor(props){
     //     super(props)
@@ -21,22 +23,39 @@ export default class RecipeShow extends Component {
         const {recipe, recipeId} = this.props;
         if (!recipe) return null;
         let instructionLi;
+        let ingredientsLi;
+
         if (recipe && recipe.analyzedInstructions && recipe.analyzedInstructions.length > 0){
             instructionLi = recipe.analyzedInstructions[0].steps.map((instruction, i) => {
                 return(
                     <li key={i}>{instruction.step}</li>
                 )
             })
+            ingredientsLi = recipe.extendedIngredients.map((ingredient, i) => {
+                return(
+                    <li key={i}>{ingredient.original}</li>
+                )
+            })
         }
         return (
             <div>
-                <img src={recipe.image} alt="" />
-                <p>{recipe.title}</p>
-                <LikeContainer recipeId={recipeId}/>
-                <p>{recipe.sourceName}</p>
-                <ul>{instructionLi}</ul>
-                <CommentsIndexContainer recipeId={recipeId}/>
-                <CommentsFormContainer recipeId={recipeId}/>
+                <div className="recipe-show-container">
+                    <h2>{recipe.title}</h2>
+                    <p className="recipe-show-sourceName">{recipe.sourceName}</p>
+                    <div className="recipe-show-content">
+                        <img src={recipe.image} alt="" />
+                        <LikeContainer recipeId={recipeId}/>
+                        <h3 className="ingredients-header">Ingredients</h3>
+                        <ul className="ingredients-list">{ingredientsLi}</ul>
+                        <h3 className="directions-header">Directions</h3>
+                        <ol className="directions-list">{instructionLi}</ol>
+                    </div>
+                </div>
+                <div className="comments-container">
+                    <h3 className="comments-header">Comments</h3>
+                    <CommentsIndexContainer recipeId={recipeId}/>
+                    <CommentsFormContainer recipeId={recipeId}/>
+                </div>
             </div>
         )
     }
