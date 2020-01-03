@@ -26,9 +26,7 @@ export const receiveRandomRecipes = recipes => {
 }
 
 export const fetchRecipes = (filters) => dispatch => {
-     ;
     return RecipeAPIUtil.fetchApiRecipes(filters).then(recipes => {
-         ;
         return dispatch(receiveRecipes(recipes));
     });
 };
@@ -40,7 +38,9 @@ export const fetchSingleRecipe = (recipeId) => dispatch => {
 };
 
 export const fetchRandomRecipes = (number) => dispatch => {
+    debugger
     return RecipeAPIUtil.fetchApiRandomRecipes(number).then(recipes => {
+        debugger
         return dispatch(receiveRandomRecipes(recipes));
     })
 }

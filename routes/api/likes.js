@@ -14,14 +14,9 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  Like.findByIdAndRemove(req.params.id, (error, data) => {
-    if (error) {
-      console.log("error in deleting yo!");
-      throw error;
-    } else {
-      console.log("data all gone and deleted yo");
-    }
-  });
+  Like.findByIdAndRemove(req.params.id)
+    .then(like => res.json(like))
+    .catch((error) => {throw error})
 });
 
 router.get('/recipes/:recipe_id', (req, res) => {

@@ -3,9 +3,9 @@ import RecipeIndexItem from './recipe_index_item';
 import './recipes.css';
 
 export default class FilteredRecipeIndex extends Component {
-    constructor(props){
-        super(props);
-    }
+    // constructor(props){
+    //     super(props);
+    // }
 
     render() {
         const { recipes } = this.props;

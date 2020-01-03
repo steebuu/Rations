@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import "./recipes.css";
 
 export default class RecipeIndexItem extends Component {
-    constructor(props){
-        super(props)
-    }
+    // constructor(props){
+    //     super(props)
+    // }
 
     render() {
         const {recipe} = this.props;
