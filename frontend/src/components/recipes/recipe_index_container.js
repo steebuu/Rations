@@ -10,6 +10,7 @@ const msp = (state) => {
 };
 
 const mdp = (dispatch) => {
+     ;
     return {
         fetchRandomRecipes: (num) => dispatch(fetchRandomRecipes(num))
     }

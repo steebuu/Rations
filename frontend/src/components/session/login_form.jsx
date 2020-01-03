@@ -1,4 +1,5 @@
 import React from 'react';
+import './session.css';
 import { withRouter } from 'react-router-dom';
 
 class LoginForm extends React.Component {
@@ -46,9 +47,9 @@ class LoginForm extends React.Component {
     // Render the session errors if there are any
     renderErrors() {
         return (
-            <ul>
+            <ul className="session-errors-ul">
                 {Object.keys(this.state.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li key={`error-${i}`} className="session-error-li">
                         {this.state.errors[error]}
                     </li>
                 ))}
@@ -58,26 +59,25 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <input type="text"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                            placeholder="Email"
-                        />
-                        <br />
-                        <input type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                            placeholder="Password"
-                        />
-                        <br />
-                        <input type="submit" value="Submit" />
-                        {this.renderErrors()}
-                    </div>
-                </form>
-            </div>
+          <div className="login-form-container">
+            <h2 className="login-header">Login</h2>
+            <form onSubmit={this.handleSubmit} className="login-form">
+              {this.renderErrors()}
+              <input
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+                placeholder="Email"
+              />
+              <input
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                placeholder="Password"
+              />
+              <input type="submit" value="Submit" id="login-form-submit" />
+            </form>
+          </div>
         );
     }
 }

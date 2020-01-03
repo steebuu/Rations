@@ -6,6 +6,7 @@ export const fetchApiRecipes = (filters) => {
 }
 
 export const fetchApiRandomRecipes = (number) => {
+   
   return axios.post('/api/recipes/random', { number: number });
 }
 

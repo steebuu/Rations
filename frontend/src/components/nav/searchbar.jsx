@@ -30,10 +30,19 @@ export default class Searchbar extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="Search by Ingredients ex: bacon, lettuce, tomato" value={this.state.search} onChange={this.update('search')}/>
-                <input type="submit" />
-            </form>
-        )
+          <form onSubmit={this.handleSubmit} className="search-bar-form">
+            <input
+              type="text"
+              className="search-bar"
+              placeholder="Search by Ingredients"
+              value={this.state.search}
+              onChange={this.update("search")}
+            />
+            <div className="search-submit-container">
+              <input type="submit" className="search-bar-submit" value=""/>
+              <i className="fas fa-search search-icon"></i>
+            </div>
+          </form>
+        );
     }
 }

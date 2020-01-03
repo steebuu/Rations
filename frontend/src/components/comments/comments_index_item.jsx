@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './comments.css';
 export default class CommentsIndexItem extends React.Component {
     constructor(props){
         super(props)
@@ -44,9 +44,9 @@ export default class CommentsIndexItem extends React.Component {
         let component;
 
         if (this.state.edit) {
-            component = <form onSubmit={this.handleSubmit}>
+            component = <form className="message-edit-form" onSubmit={this.handleSubmit}>
                             <input type="text" value={this.state.body} onChange={this.update("body")}/>
-                            <button>Save Changes</button>
+                            <button className="save-changes">Save</button>
                         </form>      
         } else {
             component = <p>{this.state.body}</p>
@@ -55,17 +55,17 @@ export default class CommentsIndexItem extends React.Component {
         let authButtons;
 
         if (currentUser && currentUser.id === comment.user) {
-            authButtons = <div>
-                            <button onClick={this.handleEdit}>Edit</button>
-                            <button onClick={this.handleDelete}>Delete</button>
+            authButtons = <div className="auth-buttons">
+                            <button className="auth-edit" onClick={this.handleEdit}>Edit</button>
+                            <button className="auth-delete" onClick={this.handleDelete}>Delete</button>
                           </div>
         }
 
         return (
-            <div>
-                <span>{comment.username}</span>
-                {component}
-                {authButtons}
+            <div className="message-container">
+                <span className="message-username">{comment.username}:</span>
+                <div className="message-split">
+                </div>
             </div>
         )
     }

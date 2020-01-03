@@ -1,0 +1,70 @@
+.login-form-container,
+.signup-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+}
+
+.login-header,
+.signup-header{
+    color: rgb(158, 152, 152);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.login-form,
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background: #181818;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.login-form input,
+.signup-form input{
+    background: #202020;
+    border: 1px solid #272728;
+    margin: 7px 0;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    color: gray;
+    font-size: 14px;
+}
+
+#login-form-submit,
+#signup-form-submit{
+    background-color: #393a3d;
+    color: rgb(173, 169, 169);
+    font-size: 16px;
+}
+
+#login-form-submit:hover,
+#signup-form-submit:hover{
+    transition: .2s;
+    background-color: #39c7dd;
+    color: black;
+}
+
+.login-form input::placeholder,
+.signup-form input::placeholder {
+    font-size: 16px;
+}
+
+.session-errors-ul {
+    padding-bottom: 20px;
+}
+
+.session-error-li {
+    list-style: none;
+    color: #39c7dd;
+    text-align: center;
+    line-height: 30px;
+}

@@ -38,7 +38,9 @@ export const fetchSingleRecipe = (recipeId) => dispatch => {
 };
 
 export const fetchRandomRecipes = (number) => dispatch => {
+     
     return RecipeAPIUtil.fetchApiRandomRecipes(number).then(recipes => {
+         
         return dispatch(receiveRandomRecipes(recipes));
     })
 }

@@ -1,0 +1,115 @@
+.comment-form {
+  display: flex;
+  align-items: center;
+}
+
+.comment-input {
+  background-color: #3F3F40;
+  border: none;
+  outline: none;
+  color: #e6e6e6;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: calc(100% - 40px);
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 20px 0;
+  height: 17px
+}
+
+.comment-input::placeholder {
+  color: rgb(199,195,195)
+}
+
+.comments-header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  padding: 10px 0px;
+  color: rgb(199, 195, 195);
+}
+
+.comment-form-button {
+  outline: none;
+  margin-left: 10px;
+  background-color: #39c7dd;
+  color: black;
+  font-size: 14px;
+  border-color: #39c7dd;
+  border-radius: 5px;
+  height: 37px;
+  font-weight: 600;
+  padding: 0px 15px;
+}
+
+.comment-form-button:hover {
+  transition: .2s;
+  background-color: #19b0c7;
+  box-shadow: 0px 0px 8px #19b0c7;
+}
+
+.message-container {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+}
+
+.message-username {
+  padding-right: 10px;
+  color: #B0AEAE;
+  font-weight: 600;
+}
+
+.message-split {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message-split p{
+  color: #a0a0a0;
+}
+
+.auth-edit {
+  background: none;
+  border: none;
+  color: #6d6d6d;
+  font-weight: 600;
+  outline: none;
+}
+
+.auth-delete{
+  background: none; 
+  border: none;
+  color: #545353;
+  font-weight: 600;
+  outline: none;
+}
+
+.auth-edit:hover{
+  text-decoration: underline;
+}
+
+.auth-delete:hover{
+  text-decoration: underline;
+}
+
+
+.message-edit-form input{
+  background: #3F3F40;
+  border: none;
+  outline: none;
+  color: #e6e6e6;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px; 
+}
+
+.save-changes {
+  outline: none;
+  background: #39c7dd;
+  color: black;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+  margin-left: 10px;
+}
