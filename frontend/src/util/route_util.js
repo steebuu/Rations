@@ -9,11 +9,7 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => (
         !loggedIn ? (
             <Component {...props} />
         ) : (
-<<<<<<< HEAD
                 // Redirect to the  page if the user is authenticated
-=======
-                // Redirect to the tweets page if the user is authenticated
->>>>>>> Comments
                 <Redirect to="/" />
             )
     )} />
@@ -32,7 +28,6 @@ const Protected = ({ component: Component, loggedIn, ...rest }) => (
         }
     />
 );
-
 // Use the isAuthenitcated slice of state to determine whether a user is logged in
 
 const mapStateToProps = state => (
