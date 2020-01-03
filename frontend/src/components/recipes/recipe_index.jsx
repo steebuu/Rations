@@ -10,10 +10,8 @@ export default class RecipeIndex extends Component {
 
     componentDidMount(){
         debugger;
-        this.props.fetchRandomRecipes(1)
-            .then(null, console.log("not mounting"));
+        this.props.fetchRandomRecipes(1);
     }
-
 
     render() {
         const {recipes} = this.props;
