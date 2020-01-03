@@ -30,6 +30,8 @@ export default class RecipeShow extends Component {
                     <li key={i}>{instruction.step}</li>
                 )
             })
+        } else if (recipe && recipe.analyzedInstructions) {
+            instructionLi = <span> No instructions provided - use your imagination :)</span>
         }
 
         if (recipe && recipe.extendedIngredients) {
