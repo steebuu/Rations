@@ -34,7 +34,7 @@ export default class Searchbar extends Component {
             <input
               type="text"
               className="search-bar"
-              placeholder="Search by Ingredients"
+              placeholder="Search by Ingredients ex: bacon, lettuce, tomato"
               value={this.state.search}
               onChange={this.update("search")}
             />
