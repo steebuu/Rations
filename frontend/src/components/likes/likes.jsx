@@ -29,15 +29,21 @@ export default class Like extends Component {
 
     render() {
         const {user, likes} = this.props;
-        let heart = <i className="far fa-heart"></i>
+        let heart;
+        let button;
+
         if (user && likes[user.id]){
             heart = <i className="fas fa-heart"></i>
+            button = <button onClick={this.handleLike}>{heart}</button>
+        } else if (user && Object.keys(user).length > 0) {
+            heart = <i className="far fa-heart"></i>
+            button = <button onClick={this.handleLike}>{heart}</button>
         }
 
         return (
             <div>
                 <span>{Object.keys(likes).length + "like(s)"}</span>
-                <button onClick={this.handleLike}>{heart}</button>
+                {button}
             </div>
         )
     }
