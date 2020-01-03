@@ -32,11 +32,11 @@
     color: white;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    /* border-radius: 5px; */
     height: 35px;
     width: 100%;
     font-size: 16px;
     align-self: center;
+    outline: none;
 }
 
 .search-bar::placeholder {
@@ -85,7 +85,6 @@
 }
 
 .signup-button {
-  /* background-color: #202020; */
   color: rgb(199, 195, 195);
   padding: 5px 15px;
   margin: 0px 10px;

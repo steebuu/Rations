@@ -1,0 +1,31 @@
+.filtered-recipe-index,
+.recipe-index {
+  display: flex;
+  padding: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.recipe-index-item-container{
+    background: #202020;
+    border-radius: 15px;
+    padding: 20px 20px 10px 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.recipe-index-item-container a {
+    text-decoration: none;
+    color: rgb(199, 195, 195);
+    text-align: center;
+}
+
+.recipe-index-item img{
+    border-radius: 10px;
+}
+
+.recipe-index-item p {
+    font-size: 18px;
+    padding-top: 15px;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RecipeIndexItem from './recipe_index_item';
+import './recipes.css';
 
 export default class FilteredRecipeIndex extends Component {
     constructor(props){
@@ -15,7 +16,7 @@ export default class FilteredRecipeIndex extends Component {
             return <RecipeIndexItem recipe={recipe} key={recipe.id} />
         })
         return (
-            <div>
+            <div className="filtered-recipe-index">
                 {recipeLis}
             </div>
         )

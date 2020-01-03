@@ -20,10 +20,6 @@ export default class RecipeIndex extends Component {
         const recipeLis = Object.values(recipes).map(recipe => {
             return <RecipeIndexItem recipe={recipe} key={recipe.id}/>
         })
-        return (
-            <div>
-                {recipeLis}
-            </div>
-        )
+        return <div className="recipe-index">{recipeLis}</div>;
     }
 }
