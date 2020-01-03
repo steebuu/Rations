@@ -12,11 +12,8 @@ router.post('/', (req, res) => {
   if (!isValid) {
     return res.status(400).json(errors);
   }
-<<<<<<< HEAD
-=======
 
   const { body, user, recipe, username } = req.body;
->>>>>>> Comments
   
   const newComment = new Comment({
     user: user,
@@ -51,8 +48,6 @@ router.patch('/:id', (req, res) => {
       comment.save();
     }
   });
-
-  // Comment.findOneAndUpdate({ _id: req.body.id})
 });
 
 module.exports = router;
