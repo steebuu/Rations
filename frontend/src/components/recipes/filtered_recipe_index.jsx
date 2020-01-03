@@ -17,7 +17,9 @@ export default class FilteredRecipeIndex extends Component {
         })
         return (
             <div className="filtered-recipe-index">
-                {recipeLis}
+                <div className="filtered-recipe-index-container">
+                    {recipeLis}
+                </div>
             </div>
         )
     }
