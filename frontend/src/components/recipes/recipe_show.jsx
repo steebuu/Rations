@@ -18,10 +18,11 @@ export default class RecipeShow extends Component {
     // }
 
     render() {
-        const {recipe, recipeId} = this.props;
+        const {recipe, recipeId, user} = this.props;
         if (!recipe) return null;
         let instructionLi;
         let ingredientsLi;
+        let commentForm;
 
         if (recipe && recipe.analyzedInstructions && recipe.analyzedInstructions.length > 0){
             instructionLi = recipe.analyzedInstructions[0].steps.map((instruction, i) => {
@@ -35,6 +36,10 @@ export default class RecipeShow extends Component {
                 )
             })
         }
+
+        if (user && Object.keys(user).length > 0) {
+            commentForm = <CommentsFormContainer recipeId={recipeId} />
+        }
         return (
             <div>
                 <img src={recipe.image} alt="" />
@@ -47,7 +52,7 @@ export default class RecipeShow extends Component {
                 <ul>{instructionLi}</ul>
                 <span>Comments</span>
                 <CommentsIndexContainer recipeId={recipeId}/>
-                <CommentsFormContainer recipeId={recipeId}/>
+                {commentForm}
             </div>
         )
     }

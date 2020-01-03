@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { fetchComments } from '../../actions/comment_actions';
+import React from 'react';
 
-export default class CommentsIndexItem extends Component {
+export default class CommentsIndexItem extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -16,11 +15,10 @@ export default class CommentsIndexItem extends Component {
 
     handleSubmit(e){
         e.preventDefault();
-        const {updateComment, comment, fetchComments, recipeId} = this.props;
+        const {updateComment, comment} = this.props;
 
         updateComment({id: comment._id, body: this.state.body})
         this.setState({edit: false})
-        // fetchComments(recipeId);
     }
 
     update(field) {
@@ -65,7 +63,7 @@ export default class CommentsIndexItem extends Component {
 
         return (
             <div>
-                <span>{comment.username}:</span>
+                <span>{comment.username}</span>
                 {component}
                 {authButtons}
             </div>

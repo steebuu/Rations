@@ -5,7 +5,8 @@ import { fetchSingleRecipe } from '../../actions/recipe_actions';
 const msp = (state, ownProps) => {
     return {
         recipe: state.entities.recipes[ownProps.match.params.recipeId],
-        recipeId: ownProps.match.params.recipeId
+        recipeId: ownProps.match.params.recipeId,
+        user: state.session.user
     }
 };
 
