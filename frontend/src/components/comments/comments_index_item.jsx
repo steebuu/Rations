@@ -65,7 +65,9 @@ export default class CommentsIndexItem extends React.Component {
             <div className="message-container">
                 <span className="message-username">{comment.username}:</span>
                 <div className="message-split">
+                    {component}
                 </div>
+                {authButtons}
             </div>
         )
     }
