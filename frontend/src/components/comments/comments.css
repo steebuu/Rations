@@ -39,6 +39,7 @@
   height: 37px;
   font-weight: 600;
   padding: 0px 15px;
+  cursor: pointer;
 }
 
 .comment-form-button:hover {
@@ -74,6 +75,7 @@
   color: #6d6d6d;
   font-weight: 600;
   outline: none;
+  cursor: pointer;
 }
 
 .auth-delete{
@@ -82,6 +84,7 @@
   color: #545353;
   font-weight: 600;
   outline: none;
+  cursor: pointer;
 }
 
 .auth-edit:hover{
