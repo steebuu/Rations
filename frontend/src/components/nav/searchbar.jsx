@@ -21,7 +21,8 @@ export default class Searchbar extends Component {
             ingredients: [],
             number: 1
         }
-        filter.ingredients.push(this.state.search);
+        const ingredientsArray = this.state.search.split(",")
+        ingredientsArray.forEach(ingredient => filter.ingredients.push(ingredient))
         this.props.fetchRecipes(filter);
         this.props.history.push(`/searchresults`);
     }
