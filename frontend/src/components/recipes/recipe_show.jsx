@@ -21,10 +21,17 @@ export default class RecipeShow extends Component {
         const {recipe, recipeId} = this.props;
         if (!recipe) return null;
         let instructionLi;
+        let ingredientsLi;
+
         if (recipe && recipe.analyzedInstructions && recipe.analyzedInstructions.length > 0){
             instructionLi = recipe.analyzedInstructions[0].steps.map((instruction, i) => {
                 return(
                     <li key={i}>{instruction.step}</li>
+                )
+            })
+            ingredientsLi = recipe.extendedIngredients.map((ingredient, i) => {
+                return(
+                    <li key={i}>{ingredient.original}</li>
                 )
             })
         }
@@ -34,7 +41,11 @@ export default class RecipeShow extends Component {
                 <p>{recipe.title}</p>
                 <LikeContainer recipeId={recipeId}/>
                 <p>{recipe.sourceName}</p>
+                <span>Ingredients</span>
+                <ul>{ingredientsLi}</ul>
+                <span>Directions</span>
                 <ul>{instructionLi}</ul>
+                <span>Comments</span>
                 <CommentsIndexContainer recipeId={recipeId}/>
                 <CommentsFormContainer recipeId={recipeId}/>
             </div>

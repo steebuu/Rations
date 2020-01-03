@@ -65,7 +65,7 @@ export default class CommentsIndexItem extends Component {
 
         return (
             <div>
-                <span>{comment.username}</span>
+                <span>{comment.username}:</span>
                 {component}
                 {authButtons}
             </div>
