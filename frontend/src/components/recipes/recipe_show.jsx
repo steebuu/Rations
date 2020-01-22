@@ -48,7 +48,7 @@ export default class RecipeShow extends Component {
             commentForm = <CommentsFormContainer recipeId={recipeId} />
         }
 
-        const defaultImage = require("../../images/noimg.jpeg")
+        const defaultImage = "https://spoonacular.com/recipeImages/496003-556x370.jpg"
 
         if (!recipe.image) {
             recipe.image = defaultImage
