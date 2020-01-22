@@ -9,7 +9,7 @@ const validateRecipeInput = require('../../validation/recipes');
 router.post('/', (req, res) => {
   const {filters} = req.body;
   const ingredientsString = filters.ingredients.map(ingredient => ingredient + '%2C');
-  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?number=${filters.number}&ranking=2&ingredients=`
+  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?number=${filters.number}&ranking=1&ingredients=`
   const advancedUrl = baseUrl + ingredientsString;
   const perfectUrl = advancedUrl + `&apiKey=${keys.recipeKey}`;
   axios.get(perfectUrl).then(recipes => {
