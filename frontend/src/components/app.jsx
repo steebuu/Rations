@@ -18,7 +18,7 @@ const App = () => (
             <Route exact path="/" component={MainPage} />
             <Route path ="/recipes/:recipeId" component={RecipeShowContainer}/>
             <Route path="/searchresults" component={FilteredRecipeIndexContainer} />
-            <Route path="/favorites" component={LikedRecipeIndexContainer}></Route>
+            <Route path="/favorites" component={LikedRecipeIndexContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
         </Switch>

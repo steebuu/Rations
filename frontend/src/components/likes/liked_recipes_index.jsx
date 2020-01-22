@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class LikedRecipeIndex extends Component {
     constructor(props){
@@ -12,12 +13,10 @@ export default class LikedRecipeIndex extends Component {
 
     render(){
         const { userLikes } = this.props;
-        debugger;
         let userLikesLi = null;
-        if (Object.keys(userLikes).length > 0){
+        if (userLikes.data){
             userLikesLi = userLikes.data.map((like, i) => {
-                debugger;
-                return (<li key={i}>{like.title}</li>)
+                return (<Link to={`/recipes/${like.recipe}`} key={i}>{like.title}</Link>)
             });
         }
         return (
