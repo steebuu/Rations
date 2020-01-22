@@ -8,6 +8,7 @@ class NavBar extends React.Component {
         super(props);
         this.logoutUser = this.logoutUser.bind(this);
         this.getLinks = this.getLinks.bind(this);
+        this.refetch = this.refetch.bind(this);
     }
 
     logoutUser(e) {
@@ -33,10 +34,19 @@ class NavBar extends React.Component {
         }
     }
 
+    refetch() {
+        const {fetchRandomRecipes, startLoading} = this.props;
+        startLoading();
+        fetchRandomRecipes(21);
+    }
+
     render() {
+        const {fetchRandomRecipes} = this.props;
         return (
           <div className="navbar">
-            <Link to={'/'} className="logo">Rations</Link>
+            <div className="logo-div" onClick={this.refetch}>
+                <Link to={'/'} className="logo">Rations</Link>
+            </div>
                 <SearchbarContainer />
                 {this.getLinks()}
           </div>
