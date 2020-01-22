@@ -47,6 +47,12 @@ export default class RecipeShow extends Component {
         if (user && Object.keys(user).length > 0) {
             commentForm = <CommentsFormContainer recipeId={recipeId} />
         }
+
+        const defaultImage = require("../../images/noimg.jpeg")
+
+        if (!recipe.image) {
+            recipe.image = defaultImage
+        }
         
         return (
             <div>
