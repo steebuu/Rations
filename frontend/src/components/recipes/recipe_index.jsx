@@ -4,9 +4,6 @@ import React, { Component } from 'react'
 import RecipeIndexItem from './recipe_index_item';
 
 export default class RecipeIndex extends Component {
-    // constructor(props){
-    //     super(props)
-    // }
 
     componentDidMount(){
         const {startLoading, fetchRandomRecipes, recipes} = this.props;
@@ -28,18 +25,19 @@ export default class RecipeIndex extends Component {
         let component;
 
         if (loading) {
-            component = <div class="background-loader">
-                <div class="loader"></div>
+            component = <div className="background-loader">
+                <div className="loader"></div>
+                <p className="loading">Loading...</p>
             </div> 
         } else {
-            component = recipeLis
+            component = <div className="recipe-index-container">
+                {recipeLis}
+            </div>
         }
         
         return (
             <div className="recipe-index">
-                <div className="recipe-index-container">
-                    {component}
-                </div>
+                {component}
             </div>
         );
     }

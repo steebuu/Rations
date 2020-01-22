@@ -112,7 +112,7 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin: 0;
 }
@@ -124,6 +124,7 @@
   width: 50px;
   height: 50px;
   animation: spinner 2s linear infinite;
+  margin-top: 20px;
 }
 
 @keyframes spinner{
@@ -134,4 +135,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.loading {
+    padding-top: 25px;
+    font-size: 14px;
+    color: rgb(199, 195, 195);
 }
