@@ -8,7 +8,7 @@ import {
     START_LOADING
 } from '../actions/loading_actions';
 
-const LoadingReducer = ( state = {}, action) => {
+const LoadingReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case START_LOADING:
