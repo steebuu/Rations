@@ -12,13 +12,13 @@ const LoadingReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case START_LOADING:
-            return { loading: true };
+            return true;
         case RECEIVE_RANDOM_RECIPES:
-            return { loading: false };
+            return false;
         case RECEIVE_RECIPES:
-            return { loading: false };
+            return false;
         case RECEIVE_SINGLE_RECIPE:
-            return { loading: false };
+            return false;
         default:
             return state;
     }

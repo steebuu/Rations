@@ -14,18 +14,25 @@ export default class RecipeIndex extends Component {
     }
 
     render() {
-        const { recipes } = this.props;
+        const { recipes, loading } = this.props;
         if (!recipes) {
             return null;
         }
         const recipeLis = Object.values(recipes).map(recipe => {
             return <RecipeIndexItem recipe={recipe} key={recipe.id} />
         })
+
+        let test;
+
+        if (loading) {
+            test = <p>we are loading</p>
+        }
         
         return (
             <div className="recipe-index">
                 <div className="recipe-index-container">
                     {recipeLis}
+                    {test}
                 </div>
             </div>
         );

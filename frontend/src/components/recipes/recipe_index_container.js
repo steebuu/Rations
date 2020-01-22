@@ -5,7 +5,7 @@ import RecipeIndex from './recipe_index';
 
 const msp = (state) => {
     return {
-        // recipes: Object.values(state.entities.recipes)
+        loading: state.ui.loading,
         recipes: state.entities.recipes
     }
 };
