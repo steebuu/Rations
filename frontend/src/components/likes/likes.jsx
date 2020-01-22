@@ -14,14 +14,15 @@ export default class Like extends Component {
 
     handleLike(e){
         e.preventDefault();
-        const {user, recipeId, likeRecipe, unlikeRecipe, fetchLikes, likes} = this.props;
+        const {user, recipeId, likeRecipe, unlikeRecipe, fetchLikes, likes, title} = this.props;
  
         if (likes[user.id]){
             unlikeRecipe(likes[user.id]._id)
         } else {
             const createLike = {
                 userId: user.id,
-                recipeId: recipeId
+                recipeId: recipeId,
+                title: title
             };
             likeRecipe(createLike)
         }
