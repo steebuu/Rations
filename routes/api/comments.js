@@ -23,7 +23,8 @@ router.post('/', (req, res) => {
   });
 
   newComment.save().then(comment => {
-    res.json(comment)});
+    res.json(comment)
+  });
 });
 
 router.delete('/:id', (req, res) => {

@@ -9,7 +9,7 @@ const validateRecipeInput = require('../../validation/recipes');
 router.post('/', (req, res) => {
   const {filters} = req.body;
   const ingredientsString = filters.ingredients.map(ingredient => ingredient + '%2C');
-  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?number=${filters.number}&ranking=2&ingredients=`
+  const baseUrl = `https://api.spoonacular.com/recipes/findByIngredients?number=${filters.number}&ranking=1&ingredients=`
   const advancedUrl = baseUrl + ingredientsString;
   const perfectUrl = advancedUrl + `&apiKey=${keys.recipeKey}`;
   axios.get(perfectUrl).then(recipes => {
@@ -43,12 +43,32 @@ router.get('/user/:user_id', (req, res) => {
     );
 });
 
-router.get('/:id', (req, res) => {
+router.get('/created/:id', (req, res) => {
   Recipe.findById(req.params.id)
     .then(recipe => res.json(recipe))
     .catch(err =>
       res.status(404).json({ noRecipefound: 'No recipe found with that ID' })
     );
+});
+
+router.post('/create', (req, res) => {
+  const newRecipe = new Recipe({
+    user_id: req.body.userId,
+    username: req.body.username,
+    title: req.body.title,
+    image: req.body.image,
+    ingedients: req.body.ingedients,
+    directions: req.body.directions
+  });
+  newComment.save().then(comment => {
+    res.json(comment)
+  });
+});
+
+router.delete('/:id', (req, res) => {
+  Recipe.findByIdAndRemove(req.params.id)
+    .then(recipe => res.json(recipe))
+    .catch((error) => { throw error; });
 });
 
 
