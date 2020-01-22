@@ -5,10 +5,11 @@ const mongo = require('mongodb');
 const Like = require('../../models/Like');
 
 router.post('/', (req, res) => {
-  const { recipe, user } = req.body;
+  const { recipe, user, title } = req.body;
   const newLike = new Like({
     user: user,
-    recipe: recipe
+    recipe: recipe,
+    title: title
   });
   newLike.save().then(like => res.json(like));
 });

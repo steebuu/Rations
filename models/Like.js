@@ -9,6 +9,9 @@ const LikeSchema = new Schema({
   recipe: {
     type: Number
   },
+  title: {
+    type: String
+  },
   date: {
     type: Date,
     default: Date.now

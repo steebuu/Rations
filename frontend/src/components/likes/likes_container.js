@@ -6,6 +6,7 @@ const msp = (state, ownProps) => {
     return {
         user: state.session.user,
         recipeId: ownProps.recipeId,
+        title: ownProps.title,
         likes: state.entities.likes
     }
 }
