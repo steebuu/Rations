@@ -65,6 +65,7 @@ class LoginForm extends React.Component {
         };
 
         this.props.login(demo)
+        this.props.history.goBack();
     }
 
     render() {
