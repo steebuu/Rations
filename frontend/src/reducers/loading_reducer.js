@@ -4,12 +4,17 @@ import {
     RECEIVE_RANDOM_RECIPES
 } from '../actions/recipe_actions';
 
+import {
+    START_LOADING
+} from '../actions/loading_actions';
+
 const LoadingReducer = ( state = {}, action) => {
     Object.freeze(state);
-    let loading = true;
     switch (action.type) {
+        case START_LOADING:
+            return true;
         case RECEIVE_RANDOM_RECIPES:
-            return false;
+            return false
         case RECEIVE_RECIPES:
             return false;
         case RECEIVE_SINGLE_RECIPE:
