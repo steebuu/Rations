@@ -6,8 +6,7 @@ import RecipeIndexItem from './recipe_index_item';
 export default class RecipeIndex extends Component {
 
     componentDidMount(){
-        const {startLoading, fetchRandomRecipes, recipes, fetchLikesByUser, userId} = this.props;
-        fetchLikesByUser(userId);
+        const {startLoading, fetchRandomRecipes, recipes} = this.props;
         if (Object.keys(recipes).length === 0){
             startLoading();
             fetchRandomRecipes(21);
