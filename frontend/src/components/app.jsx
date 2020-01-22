@@ -9,6 +9,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import RecipeShowContainer from './recipes/recipe_show_container';
 import FilteredRecipeIndexContainer from './recipes/filtered_recipe_index_container';
+import LikedRecipeIndexContainer from './likes/liked_recipes_index_container';
 
 const App = () => (
     <div>
@@ -17,6 +18,7 @@ const App = () => (
             <Route exact path="/" component={MainPage} />
             <Route path ="/recipes/:recipeId" component={RecipeShowContainer}/>
             <Route path="/searchresults" component={FilteredRecipeIndexContainer} />
+            <Route path="/favorites" component={LikedRecipeIndexContainer}></Route>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
         </Switch>
