@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 
-export const createLike = ({ userId, recipeId }) => {
-  return axios.post('/api/likes/', {user: userId, recipe: recipeId});
+export const createLike = ({ userId, recipeId, title }) => {
+  return axios.post('/api/likes/', {user: userId, recipe: recipeId, title: title});
 }
 
 export const removeLike = id => {
