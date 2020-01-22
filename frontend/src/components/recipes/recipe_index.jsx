@@ -25,18 +25,20 @@ export default class RecipeIndex extends Component {
             return <RecipeIndexItem recipe={recipe} key={recipe.id} />
         })
 
-        let test;
+        let component;
 
         if (loading) {
-            test = <p>we are loading</p>
+            component = <div class="background-loader">
+                <div class="loader"></div>
+            </div> 
         } else {
-            test = recipeLis
+            component = recipeLis
         }
         
         return (
             <div className="recipe-index">
                 <div className="recipe-index-container">
-                    {test}
+                    {component}
                 </div>
             </div>
         );
