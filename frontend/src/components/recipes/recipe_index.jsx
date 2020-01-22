@@ -9,8 +9,11 @@ export default class RecipeIndex extends Component {
     // }
 
     componentDidMount(){
-        this.props.startLoading();
-        this.props.fetchRandomRecipes(21);
+        const {startLoading, fetchRandomRecipes, recipes} = this.props;
+        if (Object.keys(recipes).length === 0){
+            startLoading();
+            fetchRandomRecipes(21);
+        }
     }
 
     render() {
@@ -26,12 +29,13 @@ export default class RecipeIndex extends Component {
 
         if (loading) {
             test = <p>we are loading</p>
+        } else {
+            test = recipeLis
         }
         
         return (
             <div className="recipe-index">
                 <div className="recipe-index-container">
-                    {recipeLis}
                     {test}
                 </div>
             </div>
