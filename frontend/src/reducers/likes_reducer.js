@@ -1,4 +1,4 @@
-import { RECEIVE_LIKES, REMOVE_LIKE, CREATE_LIKE } from '../actions/like_actions';
+import { RECEIVE_LIKES, REMOVE_LIKE, CREATE_LIKE, RECEIVE_USER_LIKES } from '../actions/like_actions';
 
 const LikesReducer = (state = {}, action) => {
     let newState;
@@ -14,6 +14,8 @@ const LikesReducer = (state = {}, action) => {
                 return state;
             }
             return newState;
+        case RECEIVE_USER_LIKES:
+            return action.likes
         case REMOVE_LIKE:
             newState = Object.assign({}, state);
             delete newState[action.like.data.user];
