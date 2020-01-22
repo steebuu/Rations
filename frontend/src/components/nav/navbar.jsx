@@ -21,13 +21,15 @@ class NavBar extends React.Component {
         if (this.props.loggedIn) {
             return (
                 <div>
+                    <Link to={'/favorites'} className="logout-button">Favorites</Link>
+                    <Link to={'/team'} className="logout-button">Team</Link>
                     <button className="logout-button" onClick={this.logoutUser}>Logout</button>
                 </div>
             );
         } else {
             return (
-                <div>
-                    
+                <div>      
+                    <Link to={'/team'} className="logout-button">Team</Link>
                     <Link to={'/login'} className="login-button">Login</Link>
                     <Link to={'/signup'} className="signup-button">Signup</Link>
                 </div>
