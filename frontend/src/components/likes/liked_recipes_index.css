@@ -1,0 +1,15 @@
+.favoritesUl {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.favoritesUl a {
+  border: 1px solid yellow;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+}
