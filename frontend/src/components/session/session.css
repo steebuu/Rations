@@ -9,13 +9,18 @@
 
 .login-header,
 .signup-header{
-    color: rgb(158, 152, 152);
+    background: linear-gradient(to right, #09ddff, rgb(255, 238, 1));
+    background-clip: text;
+    color: transparent;
     font-family: 'Montserrat', sans-serif;
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
 }
+
 
 .login-form,
 .signup-form{
@@ -37,6 +42,12 @@
     text-align: center;
     color: gray;
     font-size: 14px;
+    outline: none;
+}
+
+.login-form input:focus,
+.signup-form input:focus {
+    outline: 2px solid #3F3F40;
 }
 
 #login-form-submit,
