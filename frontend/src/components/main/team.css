@@ -1,10 +1,11 @@
 .team-div {
     display: grid;
     padding-top: 80px;
+    padding-bottom: 30px;
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     margin: 0 auto;
-    grid-row-gap: 60px;
+    grid-row-gap: 55px;
     grid-column-gap: 40px;
 }
 
