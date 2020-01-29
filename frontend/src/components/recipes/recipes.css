@@ -69,6 +69,35 @@
     color: #B0AEAE;
 }
 
+.source-like-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-source {
+    text-decoration: none;
+    color: #39c7dd;
+    font-size: 14px;
+    position: relative;
+}
+
+.recipe-source::after{
+    width: 0%;
+    background: #39c7dd;
+    height: 1px;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    transition: .4s;
+}
+
+.recipe-source:hover::after {
+    width: 100%;
+}
+
 .recipe-show-content{
     width: 550px;
     margin: 0 auto;
