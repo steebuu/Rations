@@ -55,6 +55,9 @@
     background-color: #393a3d;
     color: rgb(173, 169, 169);
     font-size: 16px;
+    position: relative;
+    z-index: 1;
+    transition: .5s ease-out;
 }
 
 #login-form-submit:hover,
@@ -62,7 +65,10 @@
     transition: .2s;
     background-color: #39c7dd;
     color: black;
+
 }
+
+
 
 .login-form input::placeholder,
 .signup-form input::placeholder {
