@@ -1,15 +1,35 @@
 .favoritesUl {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 30%;
   margin: auto;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 .favoritesUl a {
-  border: 1px solid yellow;
-  padding: 5px;
+  background: #202020;
+  padding: 30px;
   width: 100%;
   text-align: center;
+  color: rgb(199, 195, 195);
+  margin: 10px;
+  text-decoration: none;
+}
+
+.favoritesUl a::after {
+  content: "";
+  width: 100%;
+}
+
+.favoritesDiv {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favoritesDiv > p{
+  color:rgb(199, 195, 195);
+  font-size: 20px;
 }

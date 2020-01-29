@@ -22,7 +22,10 @@ export default class LikedRecipeIndex extends Component {
         }
         return (
             <div className = "favoritesDiv">
-                <ul className = "favoritesUl">{userLikesLi}</ul>
+              <p>Your Favorite Recipes</p>
+              <ul className = "favoritesUl">
+                  {userLikesLi}
+              </ul>
             </div>
         )
 
