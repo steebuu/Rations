@@ -6,6 +6,7 @@ export default class TeamPage extends Component {
         return (
             <div className="team-div">
                 <div className="member-div">
+                    <span className="team-title">Backend Lead</span>
                     <div className="prof-pic-holder">
                         <img className="prof-pic" src="ryan_pic.jpeg"></img>
                     </div>
@@ -16,6 +17,7 @@ export default class TeamPage extends Component {
                     <a className="team-link" href="https://rmonahan.github.io/"><i className="fas team-icon fa-suitcase"></i></a>
                 </div>
                 <div className="member-div">
+                    <span className="team-title">Frontend Lead</span>
                     <div className="prof-pic-holder">
                         <img className="prof-pic" src="shree_pic.jpeg"></img>
                     </div>
@@ -26,6 +28,7 @@ export default class TeamPage extends Component {
                     <a className="team-link" href="https://www.shreejpatel.com/"><i className="fas team-icon fa-suitcase"></i></a>
                 </div>
                 <div className="member-div">
+                    <span className="team-title">Team Lead</span>
                     <div className="prof-pic-holder">
                         <img className="prof-pic" src="steve_pic.jpeg"></img>
                     </div>
@@ -36,6 +39,7 @@ export default class TeamPage extends Component {
                     <a className="team-link" href=""><i className="fas team-icon fa-suitcase"></i></a>
                 </div>
                 <div className="member-div">
+                    <span className="team-title">Flex</span>
                     <h2>Valerie Whitehouse</h2>
                     <a className="team-link" href="https://github.com/vawhitehouse"><i className="fab team-icon fa-github"></i></a>
                     <a className="team-link" href="https://www.linkedin.com/in/valeriewhitehouse/"><i className="fab team-icon fa-linkedin"></i></a>
