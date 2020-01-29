@@ -1,0 +1,19 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1000px;
+    color: rgb(199, 195, 195);
+    /* align-items: center; */
+}
+
+.about-container p {
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.about-welcome {
+    font-size: 50px;
+    align-self: center;
+    padding: 20px;
+}

@@ -86,7 +86,7 @@
 
 .login-button {
   color: rgb(199, 195, 195);
-  padding: 5px 10px;  
+  margin-right: 10px;
 }
 
 .signup-button {
