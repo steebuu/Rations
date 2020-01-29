@@ -61,7 +61,10 @@ export default class RecipeShow extends Component {
                     <p className="recipe-show-sourceName">{recipe.sourceName}</p>
                     <div className="recipe-show-content">
                         <img src={recipe.image} alt="" />
-                        <LikeContainer recipeId={recipeId} title={recipe.title}/>
+                        <div className="source-like-container">
+                            <a href={recipe.sourceUrl} className="recipe-source" target="_blank">Recipe Source</a>
+                            <LikeContainer recipeId={recipeId} title={recipe.title}/>
+                        </div>
                         <h3 className="ingredients-header">Ingredients</h3>
                         <ul className="ingredients-list">{ingredientsLi}</ul>
                         <h3 className="directions-header">Directions</h3>
