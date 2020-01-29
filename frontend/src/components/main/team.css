@@ -1,8 +1,11 @@
 .team-div {
     display: grid;
+    padding-top: 80px;
     grid-template-columns: 1fr 1fr;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    grid-row-gap: 60px;
+    grid-column-gap: 40px;
 }
 
 .team-icon {
@@ -11,7 +14,7 @@
 
 .team-link{
     color: #39c7dd;
-    margin-right: 10px;
+    margin-right: 35px;
 }
 
 .team-link:visited {
@@ -37,6 +40,37 @@
 }
 
 .team-title {
+    color: rgb(199, 195, 195);
+    font-size: 30px;
     text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid white;
+}
+
+.link-div {
+    display: flex;
+    justify-content: center;  
+}
+
+.member-main {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    color: rgb(199, 195, 195);
+}
+
+.member-info {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+.member-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.member-desc {
+    line-height: 1.3;
 }
