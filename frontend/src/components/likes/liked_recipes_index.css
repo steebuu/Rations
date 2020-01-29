@@ -23,6 +23,7 @@
 .favoritesUl a:hover {
   background-position: left bottom;
   transition:all 2s ease;
+  color: rgb(252, 223, 40)
 }
 
 .favoritesDiv {
