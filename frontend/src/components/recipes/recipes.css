@@ -98,6 +98,13 @@
     width: 100%;
 }
 
+.no-results-found {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+    color: rgb(199, 195, 195);
+}
+
 .recipe-show-content{
     width: 550px;
     margin: 0 auto;
