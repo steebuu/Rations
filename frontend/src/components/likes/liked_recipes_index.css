@@ -15,11 +15,14 @@
   color: rgb(199, 195, 195);
   margin: 10px;
   text-decoration: none;
+  background: linear-gradient(to left, #202020 50%, darkgray 100%, gray 100%);
+  background-size: 200% 100%;
+  background-position:right bottom;
 }
 
-.favoritesUl a::after {
-  content: "";
-  width: 100%;
+.favoritesUl a:hover {
+  background-position: left bottom;
+  transition:all 2s ease;
 }
 
 .favoritesDiv {
