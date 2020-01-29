@@ -15,6 +15,15 @@
     background: #202020;
     border-radius: 15px;
     padding: 20px 20px 10px 20px;
+    transition: .3s;
+}
+
+.recipe-index-item-container:hover {
+    transform: scale(1.02);
+}
+
+.recipe-index-item-container:hover p{
+    color: #fbe555;
 }
 
 .recipe-index-item-inner-container {
