@@ -18,6 +18,7 @@ const App = () => (
         <Switch>
             <Route exact path="/" component={MainPage} />
             <Route path="/team" component={TeamPage} />
+            <Route path="/about" component={AboutPage} />
             <Route path ="/recipes/:recipeId" component={RecipeShowContainer}/>
             <Route path="/searchresults" component={FilteredRecipeIndexContainer} />
             <ProtectedRoute path="/favorites" component={LikedRecipeIndexContainer} />
