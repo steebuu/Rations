@@ -1,0 +1,41 @@
+.favoritesUl {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.favoritesUl a {
+  background: #202020;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  color: rgb(199, 195, 195);
+  margin: 10px;
+  text-decoration: none;
+  background: linear-gradient(to left, #202020 50%, #00bfff 50%, #2f80ed 100%);
+  /* background: linear-gradient(to left, #202020 50%, #fffb00 50%, #f8cb00 100%); */
+  background-size: 200% 100%;
+  background-position:100% 0;
+  border-radius: 5px;
+}
+
+.favoritesUl a:hover {
+  background-position: 0 0;
+  transition:all 2s ease;
+  color: rgb(235, 235, 235);
+}
+
+.favoritesDiv {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favoritesDiv > p{
+  color:rgb(199, 195, 195);
+  font-size: 20px;
+}
