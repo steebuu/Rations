@@ -7,7 +7,6 @@ class MainPage extends React.Component {
         return (
             <div>
                 <RecipeIndexContainer />
-                <h1>Rations</h1>
             </div>
         );
     }
