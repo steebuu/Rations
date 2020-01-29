@@ -62,7 +62,8 @@
 
 .link-div {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .member-main {
@@ -79,7 +80,7 @@
 }
 
 .member-name {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
