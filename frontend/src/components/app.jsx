@@ -11,6 +11,7 @@ import RecipeShowContainer from './recipes/recipe_show_container';
 import FilteredRecipeIndexContainer from './recipes/filtered_recipe_index_container';
 import LikedRecipeIndexContainer from './likes/liked_recipes_index_container';
 import TeamPage from './main/team_page';
+import AboutPage from './main/about_page';
 
 const App = () => (
     <div>
