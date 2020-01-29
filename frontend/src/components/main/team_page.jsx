@@ -17,10 +17,10 @@ export default class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="link-div">
-                        <a className="team-link" href="https://github.com/Rmonahan"><i className="fab team-icon fa-github"></i></a>
-                        <a className="team-link" href="https://www.linkedin.com/in/ryan-monahan-99323b184/"><i className="fab team-icon fa-linkedin"></i></a>
-                        <a className="team-link" href="https://angel.co/ryan-monahan-2"><i className="fab team-icon fa-angellist"></i></a>
-                        <a className="team-link" href="https://rmonahan.github.io/"><i className="fas team-icon fa-suitcase"></i></a>
+                        <a className="team-link" href="https://github.com/Rmonahan" target="_blank"><i className="fab team-icon fa-github"></i></a>
+                        <a className="team-link" href="https://www.linkedin.com/in/ryan-monahan-99323b184/" target="_blank"><i className="fab team-icon fa-linkedin"></i></a>
+                        <a className="team-link" href="https://angel.co/ryan-monahan-2" target="_blank"><i className="fab team-icon fa-angellist"></i></a>
+                        <a className="team-link" href="https://rmonahan.github.io/" target="_blank"><i className="fas team-icon fa-suitcase"></i></a>
                     </div>
                 </div>
                 <div className="member-div">
@@ -35,10 +35,10 @@ export default class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="link-div">
-                        <a className="team-link" href="https://github.com/ShreePatel95"><i className="fab team-icon fa-github"></i></a>
-                        <a className="team-link" href="https://www.linkedin.com/in/shree1795/"><i className="fab team-icon fa-linkedin"></i></a>
-                        <a className="team-link" href="https://angel.co/shree-patel"><i className="fab team-icon fa-angellist"></i></a>
-                        <a className="team-link" href="https://www.shreejpatel.com/"><i className="fas team-icon fa-suitcase"></i></a>
+                        <a className="team-link" href="https://github.com/ShreePatel95" target="_blank"><i className="fab team-icon fa-github"></i></a>
+                        <a className="team-link" href="https://www.linkedin.com/in/shree1795/" target="_blank"><i className="fab team-icon fa-linkedin"></i></a>
+                        <a className="team-link" href="https://angel.co/shree-patel" target="_blank"><i className="fab team-icon fa-angellist"></i></a>
+                        <a className="team-link" href="https://www.shreejpatel.com/" target="_blank"><i className="fas team-icon fa-suitcase"></i></a>
                     </div>
                 </div>
                 <div className="member-div">
@@ -53,10 +53,10 @@ export default class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="link-div">
-                        <a className="team-link" href="https://github.com/steebuu"><i className="fab team-icon fa-github"></i></a>
-                        <a className="team-link" href="https://www.linkedin.com/in/liu-steve/"><i className="fab team-icon fa-linkedin"></i></a>
-                        <a className="team-link" href="https://angel.co/steve-liu-8"><i className="fab team-icon fa-angellist"></i></a>
-                        <a className="team-link" href=""><i className="fas team-icon fa-suitcase"></i></a>
+                        <a className="team-link" href="https://github.com/steebuu" target="_blank"><i className="fab team-icon fa-github"></i></a>
+                        <a className="team-link" href="https://www.linkedin.com/in/liu-steve/" target="_blank"><i className="fab team-icon fa-linkedin"></i></a>
+                        <a className="team-link" href="https://angel.co/steve-liu-8" target="_blank"><i className="fab team-icon fa-angellist"></i></a>
+                        <a className="team-link" href="#" target="_blank"><i className="fas team-icon fa-suitcase"></i></a>
                     </div>
                 </div>
                 <div className="member-div">
@@ -71,10 +71,10 @@ export default class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="link-div">
-                        <a className="team-link" href="https://github.com/vawhitehouse"><i className="fab team-icon fa-github"></i></a>
-                        <a className="team-link" href="https://www.linkedin.com/in/valeriewhitehouse/"><i className="fab team-icon fa-linkedin"></i></a>
-                        <a className="team-link" href="https://angel.co/valerie-whitehouse"><i className="fab team-icon fa-angellist"></i></a>
-                        <a className="team-link" href=""><i className="fas team-icon fa-suitcase"></i></a>
+                        <a className="team-link" href="https://github.com/vawhitehouse" target="_blank"><i className="fab team-icon fa-github"></i></a>
+                        <a className="team-link" href="https://www.linkedin.com/in/valeriewhitehouse/" target="_blank"><i className="fab team-icon fa-linkedin"></i></a>
+                        <a className="team-link" href="https://angel.co/valerie-whitehouse" target="_blank"><i className="fab team-icon fa-angellist"></i></a>
+                        <a className="team-link" href="#"  target="_blank"><i className="fas team-icon fa-suitcase"></i></a>
                     </div>
                 </div>
             </div>
