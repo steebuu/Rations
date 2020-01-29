@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './liked_recipes_index.css';
 
 export default class LikedRecipeIndex extends Component {
     constructor(props){
@@ -20,8 +21,11 @@ export default class LikedRecipeIndex extends Component {
             });
         }
         return (
-            <div>
-                <ul>{userLikesLi}</ul>
+            <div className = "favoritesDiv">
+              <p>Your Favorite Recipes</p>
+              <ul className = "favoritesUl">
+                  {userLikesLi}
+              </ul>
             </div>
         )
 
