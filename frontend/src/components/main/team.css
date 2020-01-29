@@ -5,6 +5,33 @@
     margin: 0 auto;
 }
 
-.fa-github, .fa-linkedin, .fa-angellist, .fa-suitcase {
+.team-icon {
     font-size: 30px;
+}
+
+.team-link{
+    color: #39c7dd;
+    margin-right: 10px;
+}
+
+.team-link:visited {
+    color: #39c7dd;
+}
+
+.member-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.prof-pic-holder {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.prof-pic {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
