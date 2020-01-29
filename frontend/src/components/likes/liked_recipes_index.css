@@ -17,7 +17,7 @@
   text-decoration: none;
   background: linear-gradient(to left, #202020 50%, #00bfff 50%, #2f80ed 100%);
   /* background: linear-gradient(to left, #202020 50%, #fffb00 50%, #f8cb00 100%); */
-  background-size: 202% 100%;
+  background-size: 204% 100%;
   background-position:bottom right;
   border-radius: 5px;
 }
