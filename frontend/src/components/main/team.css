@@ -11,12 +11,18 @@
 
 .team-icon {
     font-size: 30px;
+    transition: .4s ease-out;
 }
 
 .team-link{
     color: #39c7dd;
     margin-right: 35px;
 }
+
+.team-link:hover .team-icon{
+    color: #FBE555;
+}
+
 
 .team-link:visited {
     color: #39c7dd;
@@ -41,12 +47,16 @@
 }
 
 .team-title {
-    color: rgb(199, 195, 195);
+    background: linear-gradient(to right, #ff7809, rgb(238, 255, 1));
     font-size: 30px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(239, 200, 11);
 }
 
 .link-div {
