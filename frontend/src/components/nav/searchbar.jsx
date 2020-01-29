@@ -15,6 +15,12 @@ export default class Searchbar extends Component {
         })
     }
 
+    componentWillReceiveProps(){
+      if (this.props.history.location.pathname !== "/searchresults"){
+        this.setState({ search: '' });
+      }
+    }
+
     handleSubmit(e){
         e.preventDefault();
         let filter = {
@@ -24,7 +30,7 @@ export default class Searchbar extends Component {
         const ingredientsArray = this.state.search.split(",")
         ingredientsArray.forEach(ingredient => filter.ingredients.push(ingredient))
         this.props.fetchRecipes(filter);
-        this.setState({search: ''});
+        // this.setState({search: ''});
         this.props.history.push(`/searchresults`);
     }
 
