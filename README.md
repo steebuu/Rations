@@ -1,5 +1,7 @@
 Rations is a single page dark mode application that allows users to find recipes from the web with a given list of ingredients. Users can like their favorite recipes and also comment on recipes to express their opinions. Any liked recipes can be found on the favorites page. In addition, comments can be edited and deleted.
 
+### <a href="https://rations.herokuapp.com/"><p font-size='30px'>Live site</p></a>
+
 ## Stack/Tech
 
 Rations is built with the MERN ( MongoDB, Express, React, Node ) stack. It also uses the Spoonacular API to fetch recipes.
