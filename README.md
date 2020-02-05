@@ -1,8 +1,10 @@
-Rations is a single page app that allows users to find recipes from the web given a list of ingredients.
+Rations is a single page dark mode application that allows users to find recipes from the web with a given list of ingredients. Users can like their favorite recipes and also comment on recipes to express their opinions. Any liked recipes can be found on the favorites page. In addition, comments can be edited and deleted.
 
 ## Stack/Tech
 
-Rations is built on the MERN ( MongoDB, Express, React, Node ) stack. It also uses the Spoonacular API to fetch recipes.
+Rations is built with the MERN ( MongoDB, Express, React, Node ) stack. It also uses the Spoonacular API to fetch recipes.
+
+The team consists of Ryan Monahan, Shree Patel, Steve Liu, and Valerie Whitehouse.
 
 ## Features
 
