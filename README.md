@@ -6,7 +6,7 @@ Rations is a single page dark mode application that allows users to find recipes
 
 Rations is built with the MERN ( MongoDB, Express, React, Node ) stack. It also uses the Spoonacular API to fetch recipes.
 
-The team consists of Ryan Monahan, Shree Patel, Steve Liu, and Valerie Whitehouse.
+The team consists of Ryan Monahan, <a href="https://www.shreejpatel.com/" target="_blank">Shree Patel</a>, Steve Liu, and Valerie Whitehouse.
 
 ## Features
 
