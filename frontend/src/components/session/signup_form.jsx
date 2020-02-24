@@ -43,24 +43,44 @@ class SignupForm extends React.Component {
         this.props.signup(user)
     }
 
-    renderErrors() {
-        return (
-            <ul className="session-errors-ul">
-                {Object.keys(this.state.errors).map((error, i) => (
-                    <li key={`error-${i}`} className="session-error-li">
-                        {this.state.errors[error]}
-                    </li>
-                ))}
-            </ul>
-        );
-    }
+    // renderErrors() {
+    //     return (
+    //         <ul className="session-errors-ul">
+    //             {Object.keys(this.state.errors).map((error, i) => (
+    //                 <li key={`error-${i}`} className="session-error-li">
+    //                     {this.state.errors[error]}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     );
+    // }
 
     render() {
+      let emailErrors = [];
+      let passwordErrors = [];
+      let passwordConfirmErrors = [];
+      let usernameErrors = [];
+      if (Object.keys(this.state.errors).length > 0) {
+        Object.keys(this.state.errors).map((error, i) => {
+          if (error === "email") {
+            emailErrors.push(<li key={`error-${i}`} className="session-error-li">{this.state.errors[error]}</li>)
+          }
+          else if (error === "password") {
+            passwordErrors.push(<li key={`error-${i}`} className="session-error-li">{this.state.errors[error]}</li>)
+          }
+          else if (error === "password2") {
+            passwordConfirmErrors.push(<li key={`error-${i}`} className="session-error-li">{this.state.errors[error]}</li>)
+          }
+          else if (error === "username") {
+            usernameErrors.push(<li key={`error-${i}`} className="session-error-li">{this.state.errors[error]}</li>)
+          }
+        })
+      }
         return (
           <div className="signup-form-container">
             <h2 className="signup-header">Sign Up </h2>
             <form onSubmit={this.handleSubmit} className="signup-form">
-              {this.renderErrors()}
+              {/* {this.renderErrors()} */}
              
                 <input
                   type="text"
@@ -68,24 +88,28 @@ class SignupForm extends React.Component {
                   onChange={this.update("email")}
                   placeholder="Email"
                 />
+                 {emailErrors}
                 <input
                   type="text"
                   value={this.state.username}
                   onChange={this.update("username")}
                   placeholder="Username"
                 />
+                {usernameErrors}
                 <input
                   type="password"
                   value={this.state.password}
                   onChange={this.update("password")}
                   placeholder="Password"
                 />
+                {passwordErrors}
                 <input
                   type="password"
                   value={this.state.password2}
                   onChange={this.update("password2")}
                   placeholder="Confirm Password"
                 />
+                {passwordConfirmErrors}
                 <input type="submit" value="Submit" id="signup-form-submit" />
             </form>
           </div>

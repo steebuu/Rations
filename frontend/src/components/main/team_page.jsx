@@ -13,7 +13,7 @@ export default class TeamPage extends Component {
                         </div>
                         <div className="member-info">
                             <h3 className="member-name">Ryan Monahan</h3>
-                            <p className="member-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  <p className="member-desc">As part of the backend team I helped implement the database storage and retrieval using MongoDB as our database and Express.js as our backend routing controller. A large part of the data retrevial came from the Spoonacular API so I also helped figure out the optimal way to communicate with the Spoonacular API and return the required data. Within the team we had a lot of collaboration so we all were able to get experience with the different aspects of the application.</p>
                         </div>
                     </div>
                     <div className="link-div">
