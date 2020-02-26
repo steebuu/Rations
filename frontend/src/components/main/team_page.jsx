@@ -13,7 +13,7 @@ export default class TeamPage extends Component {
                         </div>
                         <div className="member-info">
                             <h3 className="member-name">Ryan Monahan</h3>
-                            <p className="member-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  <p className="member-desc">As part of the backend team, I helped implement the database storage and retrieval using MongoDB as our database and Express.js as our backend routing controller. A large part of the data retrevial came from the Spoonacular API so I also helped figure out the optimal way to communicate with the Spoonacular API and return the required data.</p>
                         </div>
                     </div>
                     <div className="link-div">
@@ -31,7 +31,7 @@ export default class TeamPage extends Component {
                         </div>
                         <div className="member-info">
                             <h3 className="member-name">Shree Patel</h3>    
-                            <p className="member-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  <p className="member-desc">As part of the frontend team, I helped forge the connection between the backend and the frontend using Redux to neatly organize the data fetched from the Spoonacular API into React components. In addition, I helped create the dark mode design of Rations using CSS to create a user friendly interface.</p>
                         </div>
                     </div>
                     <div className="link-div">
@@ -49,7 +49,7 @@ export default class TeamPage extends Component {
                         </div>
                         <div className="member-info">
                             <h3 className="member-name">Steve Liu</h3>
-                            <p className="member-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  <p className="member-desc">As team lead my responsibilities included determining app functionality, making sure backend and frontend were on the same page about the responses needed and being received, and leading daily stand ups to cover daily progress. I also worked heavily in the frontend and styling, where our team worked to determine how the Store would have access to necessary data on any given component.</p>
                         </div>
                     </div>
                     <div className="link-div">
@@ -67,7 +67,7 @@ export default class TeamPage extends Component {
                         </div>
                         <div className="member-info">
                             <h3 className="member-name">Valerie Whitehouse</h3>
-                            <p className="member-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  <p className="member-desc">As the Full Stack team member I collaborated with the backend to help determine the best way to utilize the Spoonacular API as well as manage the MongoDB database. I also collaborated with the frontend to optimize the retrieval of data from the backend and helped with styling the user experience.</p>
                         </div>
                     </div>
                     <div className="link-div">

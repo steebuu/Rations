@@ -2,18 +2,45 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 700px;
     color: rgb(199, 195, 195);
-    /* align-items: center; */
 }
 
 .about-container p {
-    padding-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
+
 }
 
 .about-welcome {
-    font-size: 50px;
     align-self: center;
-    padding: 20px;
+    padding: 60px 0 15px 0;
+    background: #FBE555;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #39c7dd;
+    letter-spacing: 6px;
+}
+
+.about-num {
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.about-direction {
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+    align-items: center;
+}
+
+.about-direction i {
+    font-size: 40px;
+    margin-right: 30px;
+    color: #FBE555;
 }
